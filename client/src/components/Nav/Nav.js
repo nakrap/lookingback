@@ -1,10 +1,19 @@
 import React from "react";
+import "./Nav.css"
 
 const Nav = () => (
-  <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a className="navbar-brand" href="/">
-      React Reading List
-    </a>
+  <nav>
+      <div className="ui inverted vertical center aligned segment" id="whole">
+        <div className="ui container-fluid">
+          <div className="ui black inverted borderless huge fluid menu">
+            <a className="header item">LookingBack</a>
+            <a className="active item">Home</a>
+            <a className="item">About</a>
+            <a className="item">Contact</a>
+          </div>
+        </div>
+    </div>
+
   </nav>
 );
 
