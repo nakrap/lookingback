@@ -40,24 +40,5 @@ const Steps = props => (
   </div>
 </div>
 );
-[
-    {
-        "id":1,
-        "name": "Step one",
-        "message":"Create an account",
-        "image": "http://www.txstate.edu/cachee573b69ce9465908a27e25de0df62a92/imagehandler/scaler/gato-docs.its.txstate.edu/jcr:bb4d517e-7d5c-41fb-866b-b547ba49dfbc/Step%2B1.png?mode=fit&amp;width=234"
-    },
-    {
-        "id":1,
-        "name": "Step one",
-        "message": "Share memories with loved ones",
-        "image": "http://www.txstate.edu/cachee573b69ce9465908a27e25de0df62a92/imagehandler/scaler/gato-docs.its.txstate.edu/jcr:bb4d517e-7d5c-41fb-866b-b547ba49dfbc/Step%2B1.png?mode=fit&amp;width=234"
-    },
-    {
-        "id":1,
-        "name": "Step one",
-        "message":"idk yet something",
-        "image": "http://www.txstate.edu/cachee573b69ce9465908a27e25de0df62a92/imagehandler/scaler/gato-docs.its.txstate.edu/jcr:bb4d517e-7d5c-41fb-866b-b547ba49dfbc/Step%2B1.png?mode=fit&amp;width=234"
-    }
-]
+
 export default Steps;
