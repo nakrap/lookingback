@@ -7,7 +7,7 @@ import Nav from "../../components/Nav";
 import Carousel from "../../components/Carousel";
 // import Welcome from "../../components/Welcome";
 // import Jumbotron from "../../components/Jumbotron";
-
+import Steps from "../../components/Steps";
 
 class Homepage extends Component {
   state = {
@@ -29,6 +29,9 @@ class Homepage extends Component {
         <Nav />
         <div className="carousel-div">
           <Carousel/>
+          </div>
+          <div className="steps-div">
+          <Steps/>
           </div>
       </div>
     );
