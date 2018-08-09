@@ -4,31 +4,21 @@ import React, { Component } from "react";
 // import { Link } from "react-router-dom";
 
 import Nav from "../../components/Nav";
-import Carousal from "../../components/Carousal";
+import PictureBanner from "../../components/PictureBanner";
 import Welcome from "../../components/Welcome";
-// import Jumbotron from "../../components/Jumbotron";
-
+import Follow from "../../components/Follow";
+import banner from "./balcony.jpg"
+// import friend from "./friends.json"
 
 class Dashboard extends Component {
-  state = {
-    books: [],
-    title: "",
-    author: "",
-    synopsis: ""
-  };
-
-  // componentDidMount() {
-  //   this.loadBooks();
-  // }
-
-  // };
 
   render() {
     return (
      <div>
         <Nav />
-          <Welcome name='Jeff'/>
-          <Carousal/>
+          <Welcome name='Jeff' />
+          <PictureBanner banner={banner}/>
+          <Follow/>
       </div>
     );
   }
