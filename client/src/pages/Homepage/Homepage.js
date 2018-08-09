@@ -27,7 +27,9 @@ class Homepage extends Component {
     return (
      <div>
         <Nav />
+        <div className="carousel-div">
           <Carousel/>
+          </div>
       </div>
     );
   }
