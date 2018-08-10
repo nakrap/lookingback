@@ -254,4 +254,6 @@ nav.ui.menu {
     margin-right: 0 !important; } }
 .steps-div {
   background: green;
+  padding-bottom: 25px;
+  padding-top: 25px;
 }
