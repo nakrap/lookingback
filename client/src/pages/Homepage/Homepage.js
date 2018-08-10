@@ -33,7 +33,7 @@ class Homepage extends Component {
           <div className="steps-div">
           <Steps/>
           </div>
-          <div classname="ThreeThings-div">
+          <div className="ThreeThings-div">
           <ThreeThings/>
           </div>
       </div>
