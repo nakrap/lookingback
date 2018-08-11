@@ -5,7 +5,7 @@ const db = require("../models");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/lookingBack"
+  "mongodb://localhost/lookingBack2"
 );
 
 const bookSeed = [
