@@ -4,9 +4,9 @@ const Schema = mongoose.Schema;
 const deceasedSchema = new Schema({
   firstName: { type: String, required: true },
   lastName: { type: String, required: true },
+  bio: { type: String, required: true },
   DOB: { type: String, required: true },
-  DOD: { type: String, required: true },
-  createdBy: { type: Schema.Types.ObjectId, ref: 'User', required: true }
+  createdBy: { type: String, required: true }
   // image: { type: image, required: false }
 });
 
