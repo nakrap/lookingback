@@ -22,23 +22,9 @@ export default {
     return axios.get("/api/users");
   },
   // Saves a user to the database
-  // saveUser: function(userData) {
-  //   return axios.post("/api/users", userData);
-  // },
-  saveUser: function() {
-    axios.post('/api/users', {
-      email: $("#email").val(),
-      firstName: $("#firstName").val(),
-      lastName: $("#lastName").val(),
-      password: $("#password").val()
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-},
+  saveUser: function(userData) {
+    return axios.post("/api/users", userData);
+  },
   // Gets all users
   getDeceased: function() {
     return axios.get("/api/deceased");
