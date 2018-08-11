@@ -13,8 +13,8 @@ import Homepage from "./pages/Homepage";
 const App = () => (
   <Router>
     <div>
-      {/* <Dashboard/> */}
-      <Homepage/>
+      <Dashboard/>
+      {/* <Homepage/> */}
       <Switch>
         {/* <Route exact path="/" component={Homepage} />
         <Route exact path="/loggedin" component={Dashboard} />
