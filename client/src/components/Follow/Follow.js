@@ -50,7 +50,6 @@ class Follow extends React.Component {
         <Cards
         id={friend.id}
         key={friend.id}
-        // name={friend.name}
         image={friend.image}            
         />
       ))}
