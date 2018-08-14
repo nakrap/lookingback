@@ -1,0 +1,73 @@
+.column{
+    margin-top: 20px;
+    border: black 1px solid;
+}
+
+.topWrapper{
+    padding: 10px;
+    background: beige;
+}
+
+.picture{
+    float: left;
+}
+
+.bio{
+    padding: 0px 0px 100px 350px;
+}
+
+
+/* Pictures are Post */
+
+.bottomWrapper{
+    padding: 10px;
+    background: lightblue;
+}
+
+.border{
+    border: 1px solid black;
+}
+
+
+.pictureSegment{
+    width: 50%;
+    /* float: left; */
+    display:inline-block;
+}
+
+.postSegment{
+    width: 50%;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 760px) {
+    .picture{
+        float: none;
+        /* border: 5px solid yellow; */
+    }
+    
+    .bio{
+        display: block;
+        padding: 0px;
+
+    }
+
+    .pictureSegment{
+        width: 100%;
+    }
+    
+    .postSegment{
+        width: 100%;
+    }
+    
+    
+    
+}
