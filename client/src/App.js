@@ -7,14 +7,15 @@ import Dashboard from "./pages/Dashboard";
 // import Carousal from "./components/Carousal";
 // import Welcome from "./components/Welcome";
 import Homepage from "./pages/Homepage";
-
+import Browsepage from "./pages/Browsepage";
 
 
 const App = () => (
   <Router>
     <div>
+      <Browsepage/>
       {/* <Dashboard/> */}
-      <Homepage/>
+      {/* <Homepage/> */}
       <Switch>
         {/* <Route exact path="/" component={Homepage} />
         <Route exact path="/loggedin" component={Dashboard} />
