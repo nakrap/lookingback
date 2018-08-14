@@ -1,5 +1,6 @@
 import React from "react";
 import "./Nav.css"
+import Search from "../Search";
 
 const Nav = () => (
   <nav>
@@ -11,7 +12,7 @@ const Nav = () => (
             <a className="item" href="/browse">Browse</a>
             <a className="item">Contact</a>
             <a className="item" href="/dashboard">Login</a>
-
+            <Search/>
           </div>
         </div>
     </div>
