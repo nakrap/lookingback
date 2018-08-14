@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 // import Detail from "./pages/Detail";
@@ -10,18 +10,36 @@ import Homepage from "./pages/Homepage";
 
 
 
-const App = () => (
-  <Router>
-    <div>
-      {/* <Dashboard/> */}
-      <Homepage/>
-      <Switch>
-        {/* <Route exact path="/" component={Homepage} />
-        <Route exact path="/loggedin" component={Dashboard} />
-   */}
-      </Switch>
-    </div>
-  </Router>
-);
+// const App = () => (
+//   <Router>
+//     <div>
+//       {/* <Dashboard/> */}
+//       <Homepage/>
+//       <Switch>
+//         {/* <Route exact path="/" component={Homepage} />
+//         <Route exact path="/loggedin" component={Dashboard} />
+//    */}
+//       </Switch>
+//     </div>
+//   </Router>
+// );
+
+class App extends Component {
+  render() {
+    return (
+      <Router>
+      <div>
+        <Switch>
+        <Route exact path="/" component={Homepage} />
+        <Route exact path="/home" component={Homepage} />
+        <Route exact path="/dashboard" component={Dashboard} />
+        {/* <Route exact path="/browse" component={Browsepage} /> */}
+
+        </Switch>
+      </div>
+    </Router>
+    );
+  }
+}
 
 export default App;
