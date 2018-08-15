@@ -1,7 +1,7 @@
 import React from "react";
 import "./Follow.css"
-import Cards from "../Cards"
-import friends from "./friends.json"
+import Cards from "../Cards";
+import friends from "./friends.json";
 
 class Follow extends React.Component {
   state = {

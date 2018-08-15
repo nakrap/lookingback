@@ -1,6 +1,6 @@
 module.exports = {
   User: require("./user"),
-  Deceased: require("./deceased"),
+  Profile: require("./profile"),
   Post: require("./post"),
   Book: require("./book")
 };

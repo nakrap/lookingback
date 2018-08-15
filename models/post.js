@@ -7,9 +7,21 @@ const postSchema = new Schema({
   // body is optional for image posts
   body: { type: String, requred: false },
   time : { type : Date, default: Date.now },
-  createdBy: { type: String, required: true },
-  comments: { type: Array, default: [] }
-  // image: { type: image }
+  profile: { 
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Profile'
+  },
+  createdBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  },
+  comments: [{
+    text: String,
+    postedBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    }
+  }]  // image: { type: image }
 });
 
 const Post = mongoose.model("Post", postSchema);
