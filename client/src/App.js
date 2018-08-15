@@ -7,7 +7,7 @@ import Dashboard from "./pages/Dashboard";
 // import Carousal from "./components/Carousal";
 // import Welcome from "./components/Welcome";
 import Homepage from "./pages/Homepage";
-
+import Browsepage from "./pages/Browsepage";
 
 
 // const App = () => (
@@ -33,7 +33,7 @@ class App extends Component {
         <Route exact path="/" component={Homepage} />
         <Route exact path="/home" component={Homepage} />
         <Route exact path="/dashboard" component={Dashboard} />
-        {/* <Route exact path="/browse" component={Browsepage} /> */}
+        <Route exact path="/browse" component={Browsepage} />
 
         </Switch>
       </div>
