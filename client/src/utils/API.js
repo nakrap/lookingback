@@ -25,14 +25,18 @@ export default {
   saveUser: function(userData) {
     return axios.post("/api/users", userData);
   },
+  updateContributed: function() {
+    return axios.post("/api/users/:id");
+  },
   // Gets all users
-  getDeceased: function() {
-    return axios.get("/api/deceased");
+  getProfiles: function() {
+    return axios.get("/api/profiles");
   },
   // Saves a user to the database
-  saveDeceased: function(userData) {
-    return axios.post("/api/deceased", userData);
+  saveProfiles: function(userData) {
+    return axios.post("/api/profiles", userData);
   },
+
   // Gets all users
   getPosts: function() {
     return axios.get("/api/posts");

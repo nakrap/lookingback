@@ -4,32 +4,42 @@ const db = require("../models");
 module.exports = {
   findAll: function(req, res) {    
       console.log('hitting find deceased')  
-    db.Deceased
+    db.Profile
       .find(req.query)
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   findById: function(req, res) {
-    db.Deceased
+    db.Profile
       .findById(req.params.id)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  create: function(req, res) {
-    db.Deceased
-      .create(req.body)
+  searchProfiles: function(req, res) {
+    console.log('hitting search profiles')
+    db.Profile
+      .find( { $and: [ { firstName: req.params.firstName }, { lastName: req.params.lastName } ] } )
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  create: function(req, res) {
+    return db.Profile
+      .create(req.body)
+      .then(dbModel => { 
+        res.json(dbModel);
+        return dbModel;
+      })
+      .catch(err => res.status(422).json(err));
+  },
   update: function(req, res) {
-    db.Deceased
+    db.Profile
       .findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   remove: function(req, res) {
-    db.Deceased
+    db.Profile
       .findById({ _id: req.params.id })
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
