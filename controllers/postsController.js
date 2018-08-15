@@ -6,6 +6,9 @@ module.exports = {
       console.log('hitting find posts')  
     db.Post
       .find(req.query)
+      .populate('profile')
+      .populate('createdBy')
+      .populate('comments.postedBy')
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
