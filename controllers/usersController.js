@@ -21,6 +21,17 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  // use $addToSet
+  updateContributed: function(req, res) {
+    db.User
+      .update(
+        { _id: req.params.id },
+        { $addToSet: { contributedTo: 'work' } }
+      )
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  }, 
+
   update: function(req, res) {
     db.User
       .findOneAndUpdate({ _id: req.params.id }, req.body)
