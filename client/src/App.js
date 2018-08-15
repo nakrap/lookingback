@@ -8,6 +8,8 @@ import Dashboard from "./pages/Dashboard";
 // import Welcome from "./components/Welcome";
 import Homepage from "./pages/Homepage";
 import Browsepage from "./pages/Browsepage";
+import profile from "./pages/Profile";
+import Profile from "./pages/Profile";
 
 
 // const App = () => (
@@ -34,6 +36,7 @@ class App extends Component {
         <Route exact path="/home" component={Homepage} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/browse" component={Browsepage} />
+        <Route exact path="/profile" component={Profile} />
 
         </Switch>
       </div>
