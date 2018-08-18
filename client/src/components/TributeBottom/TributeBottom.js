@@ -19,13 +19,16 @@ var commentData = [
 
 class TributeBottom extends React.Component {
     state = {
-        friends: friends
+        friends: friends,
+        likes: 0
+      }
+      handleLikes = () => {
+        alert('working')
+        this.setState({
+          likes:this.state.likes
+        })
       }
 
-    handleClick() {
-        alert('hello')
-        }
-          
     render(){
         return(
             <div>
@@ -47,7 +50,7 @@ class TributeBottom extends React.Component {
                     </div>
     
                     <div className="postSegment ">
-                      <CommentBox data={commentData}/>
+                      <CommentBox  data={commentData}/>
                     </div>
                 </div>
     

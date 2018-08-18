@@ -7,6 +7,19 @@ import { Comment, Icon } from 'semantic-ui-react'
 
 
 class CommentLog extends React.Component{
+  state= {
+    likes: 0
+    
+  }
+
+  handleLikes = () => {
+    alert('working')
+    this.setState({
+      likes:this.state.likes
+    })
+  }
+      
+
   render(){
     return(
       <div className="comment-list">
@@ -36,16 +49,16 @@ class Comment1 extends React.Component{
               </Comment.Text>
               <Comment.Metadata>
                 <div>2 days ago</div>
-                <div>
+                <div onClick={this.handleLikes}> 
                   <Icon name='heart' />
-                  5 Likes
+                  <div>  Likes</div>
                 </div>
               </Comment.Metadata>
             </Comment.Content>
           </Comment>
         </Comment.Group>
       </Comment>
-
+      
     )
   }
 }
