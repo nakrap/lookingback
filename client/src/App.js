@@ -10,21 +10,6 @@ import Homepage from "./pages/Homepage";
 import Browsepage from "./pages/Browsepage";
 import TributePage from "./pages/TributePage";
 
-
-// const App = () => (
-//   <Router>
-//     <div>
-//       {/* <Dashboard/> */}
-//       <Homepage/>
-//       <Switch>
-//         {/* <Route exact path="/" component={Homepage} />
-//         <Route exact path="/loggedin" component={Dashboard} />
-//    */}
-//       </Switch>
-//     </div>
-//   </Router>
-// );
-
 class App extends Component {
   render() {
     return (

@@ -2,7 +2,8 @@ import React from "react";
 import "./TributeBottom.css"
 import friends from "./friends.json"
 import CommentBox from "../../components/CommentBox"
-import CommentLog from "../../components/CommentLog"
+import ModalBox from "../../components/ModalBox";
+import { Button, Header, Image, Modal } from 'semantic-ui-react'
 
 var commentData = [
     { 
@@ -32,16 +33,21 @@ class TributeBottom extends React.Component {
             <div className="container-fluid bottomWrapper">
                 <div className="container">
                     <div className="border pictureSegment ">
-                        {this.state.friends.map(friend => (
-                            <img className="picturePortfolio" onClick={this.handleClick} src={friend.image}/>
-                        ))}
-            
+                    {this.state.friends.map(friend => (
+                        <Modal trigger={<img className="picturePortfolio" src={friend.image}/>}>
+                            <ModalBox
+                                name={friend.name}
+                                image={friend.image}
+                                occupation={friend.occupation}
+                                location={friend.location}
+                                />    
+                        </Modal>
+                    ))}
     
                     </div>
     
                     <div className="postSegment ">
                       <CommentBox data={commentData}/>
-                      {/* <CommentLog/> */}
                     </div>
                 </div>
     

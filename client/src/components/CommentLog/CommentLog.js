@@ -3,6 +3,7 @@ import "./CommentLog.css"
 import beach from "./beach.jpg"
 import friends from "./friends.json"
 import frame from "./square-image.png"
+import { Comment, Icon } from 'semantic-ui-react'
 
 
 class CommentLog extends React.Component{
@@ -10,7 +11,7 @@ class CommentLog extends React.Component{
     return(
       <div className="comment-list">
         {this.props.data.map(c =>(
-          <Comment author={c.author} text={c.text}/>          
+          <Comment1 author={c.author} text={c.text}/>          
         ))}
       </div>
 
@@ -20,16 +21,31 @@ class CommentLog extends React.Component{
 }
 
 
-class Comment extends React.Component{
+class Comment1 extends React.Component{
   render(){
     return(
-      <div className="commentlog-box"> 
-        <img class="ui avatar image commentlog-avatar" src={frame}/>
-        <span className="author">{this.props.author}</span>
-        <span className="text">{this.props.text}</span>
+      <Comment id="commentlog-box">   
+        <Comment.Group>
+          <Comment id="comment-content"> 
+            <Comment.Avatar id="comment-avatar" as='a' src={frame} />
+            <Comment.Content>
+              <Comment.Author>{this.props.author}</Comment.Author>
 
- 
-      </div>
+              <Comment.Text>
+               {this.props.text}
+              </Comment.Text>
+              <Comment.Metadata>
+                <div>2 days ago</div>
+                <div>
+                  <Icon name='heart' />
+                  5 Likes
+                </div>
+              </Comment.Metadata>
+            </Comment.Content>
+          </Comment>
+        </Comment.Group>
+      </Comment>
+
     )
   }
 }

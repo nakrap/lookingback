@@ -7,7 +7,6 @@ import Nav from "../../components/Nav";
 import banner from "./balcony.jpg"
 import ProfilePic from "../../components/ProfilePic";
 import TributeBottom from "../../components/TributeBottom";
-// import ProfilePosts from "../../components/ProfilePosts";
 
 
 import friends from "./friends.json"
