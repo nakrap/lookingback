@@ -1,0 +1,12 @@
+.pictureCard{
+    padding: 30px;
+    margin: 10px;
+    display: block;
+    border: 1px solid black;
+
+}
+
+img{
+    width: 150px; 
+}
+

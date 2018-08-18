@@ -1,6 +1,7 @@
 import React from "react";
 import "./ProfilePic.css"
 // import { PromiseProvider } from "mongoose";
+import Modal from "../../components/Modal";
 
 
 const ProfilePic = props => (
@@ -8,7 +9,7 @@ const ProfilePic = props => (
         <div className="container-fluid topWrapper">
             <div className="container">
                 <div className=" picture">
-                    <img className="ui medium rounded image" src={props.image}/>
+                    <img className="ui medium rounded image pic" src={props.image}/>
                 </div>
 
                 <div className="bio">
@@ -18,6 +19,7 @@ const ProfilePic = props => (
                 </div>
             </div>
         </div>
+        <Modal/>
     </div>
 
 )

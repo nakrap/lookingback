@@ -1,15 +1,26 @@
 import React from "react";
-import "./ProfilePhotos.css"
+import "./TributeBottom.css"
 import friends from "./friends.json"
 import CommentBox from "../../components/CommentBox"
+import CommentLog from "../../components/CommentLog"
+
+var commentData = [
+    { 
+      author:"Shawn Spencer", 
+      text:"I've heard it both ways"
+    },
+    { 
+      author:"Burton Guster", 
+      text:"You hear about Pluto? That's messed up" 
+    }
+  ];
 
 
-class ProfilePhotos extends React.Component {
+class TributeBottom extends React.Component {
     state = {
         friends: friends
       }
 
-        // let friends = this.state.friends;
     handleClick() {
         alert('hello')
         }
@@ -29,7 +40,8 @@ class ProfilePhotos extends React.Component {
                     </div>
     
                     <div className="postSegment ">
-                      <CommentBox/>
+                      <CommentBox data={commentData}/>
+                      {/* <CommentLog/> */}
                     </div>
                 </div>
     
@@ -44,4 +56,4 @@ class ProfilePhotos extends React.Component {
     }
 }
 
-export default ProfilePhotos;
+export default TributeBottom;

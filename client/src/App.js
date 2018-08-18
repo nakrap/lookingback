@@ -8,7 +8,7 @@ import Dashboard from "./pages/Dashboard";
 import Footer from "./components/Footer";
 import Homepage from "./pages/Homepage";
 import Browsepage from "./pages/Browsepage";
-import Profile from "./pages/Profile";
+import TributePage from "./pages/TributePage";
 
 
 // const App = () => (
@@ -35,7 +35,7 @@ class App extends Component {
         <Route exact path="/home" component={Homepage} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/browse" component={Browsepage} />
-        <Route exact path="/profile" component={Profile} />
+        <Route exact path="/tribute" component={TributePage} />
 
         </Switch>
         <Footer/>

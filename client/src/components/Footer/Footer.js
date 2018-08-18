@@ -11,7 +11,7 @@ const Footer = () => (
             <a className="active item" href= "/home">Contact</a>
             <a className="item" href="/browse">About</a>
             <a className="item">Something</a>
-            <a className="item" href="/profile">Profile Page Access</a>
+            <a className="item" href="/tribute">Profile Page Access</a>
           </div>
         </div>
     </div>
