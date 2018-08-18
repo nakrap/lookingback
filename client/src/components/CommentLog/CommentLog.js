@@ -51,7 +51,7 @@ class Comment1 extends React.Component{
                 <div>2 days ago</div>
                 <div onClick={this.handleLikes}> 
                   <Icon name='heart' />
-                  <div>  Likes</div>
+                  5 Likes
                 </div>
               </Comment.Metadata>
             </Comment.Content>
