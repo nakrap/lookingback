@@ -9,6 +9,9 @@ import Footer from "./components/Footer";
 import Homepage from "./pages/Homepage";
 import Browsepage from "./pages/Browsepage";
 import TributePage from "./pages/TributePage";
+import CreatePage from "./pages/CreatePage";
+
+
 
 class App extends Component {
   render() {
@@ -21,6 +24,8 @@ class App extends Component {
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/browse" component={Browsepage} />
         <Route exact path="/tribute" component={TributePage} />
+        <Route exact path="/create" component={CreatePage} />
+
 
         </Switch>
         <Footer/>
