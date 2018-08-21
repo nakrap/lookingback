@@ -1,0 +1,19 @@
+#commentlog-box{
+    border: 1px solid black;
+    background: beige;
+    text-align: left; 
+    margin-top: 10px;
+    height: 95px;
+    vertical-align: middle;
+}
+
+#comment-content{
+    /* font-size: 20px; */
+    margin-left: 30px;
+
+}
+#comment-avatar{
+    margin-top: 20px;
+    margin-right: 25px;
+    width: 50px;
+}

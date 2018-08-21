@@ -5,26 +5,13 @@ import Dashboard from "./pages/Dashboard";
 // import NoMatch from "./pages/NoMatch";
 // import Nav from "./components/Nav";
 // import Carousal from "./components/Carousal";
-// import Welcome from "./components/Welcome";
+import Footer from "./components/Footer";
 import Homepage from "./pages/Homepage";
 import Browsepage from "./pages/Browsepage";
-import profile from "./pages/Profile";
-import Profile from "./pages/Profile";
+import TributePage from "./pages/TributePage";
+import CreatePage from "./pages/CreatePage";
 
 
-// const App = () => (
-//   <Router>
-//     <div>
-//       {/* <Dashboard/> */}
-//       <Homepage/>
-//       <Switch>
-//         {/* <Route exact path="/" component={Homepage} />
-//         <Route exact path="/loggedin" component={Dashboard} />
-//    */}
-//       </Switch>
-//     </div>
-//   </Router>
-// );
 
 class App extends Component {
   render() {
@@ -36,9 +23,12 @@ class App extends Component {
         <Route exact path="/home" component={Homepage} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/browse" component={Browsepage} />
-        <Route exact path="/profile" component={Profile} />
+        <Route exact path="/tribute" component={TributePage} />
+        <Route exact path="/create" component={CreatePage} />
+
 
         </Switch>
+        <Footer/>
       </div>
     </Router>
     );
