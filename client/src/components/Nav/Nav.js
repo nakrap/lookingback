@@ -1,6 +1,7 @@
 import React from "react";
-import "./Nav.css"
-import Search from "../Search";
+import "./Nav.css";
+import { Link } from "react-router-dom";
+
 
 const Nav = () => (
   // <nav>
@@ -19,14 +20,22 @@ const Nav = () => (
   // </nav>
   <div id="fixed top menu" class="ui top fixed menu">
   <div class="ui container navbar">
-    <a class="active item">Home</a><a class="item">Work</a><a class="item">Company</a><a class="item">Careers</a>
+    <Link to="/home" className="nav-link">
+            Home
+          </Link>
+          <Link to="/browse" className="nav-link">
+            browse
+          </Link>
+          <Link to="/home" className="nav-link">
+            Home
+          </Link>
     <div class="right menu">
-      <div class="item">
-        <a class="ui button">Log in</a>
-      </div>
-      <div class="item">
-        <a class="ui primary button">Sign Up</a>
-      </div>
+    <Link to="/dashboard" className="nav-link">
+            login
+          </Link>
+          <Link to="/home" className="nav-link">
+            register
+          </Link>
     </div>
   </div>
 </div>

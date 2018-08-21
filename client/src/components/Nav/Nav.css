@@ -11,3 +11,8 @@ div.ui.top.fixed.menu {
     background: transparent;
     border-style: none;
 }
+
+a.nav-link {
+    color: whitesmoke;
+    margin-left: 10px;
+}
