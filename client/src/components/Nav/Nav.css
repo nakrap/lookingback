@@ -1,0 +1,13 @@
+div.ui.container.navbar {
+    margin-top:0px;
+    margin-bottom:10px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    height:50px;
+    background:transparent;
+}
+
+div.ui.top.fixed.menu {
+    background: transparent;
+    border-style: none;
+}
