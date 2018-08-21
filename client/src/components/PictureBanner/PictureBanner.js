@@ -1,7 +1,7 @@
 import React from "react";
 import "./PictureBanner.css"
 // import banner from "./balcony.jpg"
-import { PromiseProvider } from "mongoose";
+// import { PromiseProvider } from "mongoose";
 
 const PictureBanner = (props) => (
 <div>

@@ -1,7 +1,7 @@
 import React from "react";
 import "./ProfilePic.css"
 import banner from "./beach.jpg"
-import { PromiseProvider } from "mongoose";
+// import { PromiseProvider } from "mongoose";
 import kristy from "./kristy.png"
 import friends from "./friends.json"
 

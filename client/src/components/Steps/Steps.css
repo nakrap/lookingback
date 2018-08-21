@@ -1,6 +1,13 @@
 @charset "UTF-8";
 /* Some mixins */
 /* Basic style for some HTML elements */
+#steps-column {
+  margin-top: 20px;
+  background: whitesmoke;
+  border: whitesmoke;
+}
+
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -253,7 +260,8 @@ nav.ui.menu {
     margin-left: 0 !important;
     margin-right: 0 !important; } }
 .steps-div {
-  background: green;
+  background: whitesmoke;
   padding-bottom: 25px;
   padding-top: 25px;
 }
+
