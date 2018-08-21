@@ -4,80 +4,46 @@
 }
 
 .topWrapper{
-    padding: 10px;
     background: beige;
+    min-height: 395px;
 }
 
 .picture{
     float: left;
+    background-color: white;
 }
+
+.pic{
+    padding: 25px 55px 25px 55px;
+
+}
+/* img{
+    max-height: 300px;
+} */
 
 .bio{
     padding: 0px 0px 100px 350px;
+    max-width: 1200px;
 }
 
-
-/* Pictures are Post */
-
-.bottomWrapper{
-    padding: 10px;
-    background: lightblue;
-}
 
 .border{
     border: 1px solid black;
 }
 
 
-.pictureSegment{
-    width: 50%;
-    vertical-align: top;
-    display:inline-block;
-    text-align: center;
-}
-
-.postSegment{
-    width: 50%;
-    display: inline-block;
-    text-align: center;
-}
-
-.img{
-    height: 100px;
-
-}
-
-.picturePortfolio{
-    width: 85px;
-    height: 100px;
-    padding: 10px;
-    border: 1px black solid;
-    margin: 2px;
-    background: white;
-}
-
-
-
 @media (max-width: 760px) {
     .picture{
         float: none;
-        /* border: 5px solid yellow; */
+        padding-left:25px;
+        border: 1px solid black;
     }
     
     .bio{
+        text-align: center;
         display: block;
-        padding: 0px;
 
     }
-
-    .pictureSegment{
-        width: 100%;
-    }
-    
-    .postSegment{
-        width: 100%;
-    }
-    
     
     
 }

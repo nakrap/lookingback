@@ -14,8 +14,8 @@ const img3 = "https://image.ibb.co/gYmaCe/pablo_3.png";
 const ParallaxComponent = () => (
 <div>
     <Parallax bgImage={img1}
-      strength={100}>
-      <div style={{height: 400}}></div>
+      strength={-300}>
+      <div style={{height: 500}}></div>
       <div className="search-div">
       <Search/>
       </div>
@@ -24,20 +24,18 @@ const ParallaxComponent = () => (
           </div>
     </Parallax>
     <Parallax bgImage={img2} blur={{min: -1,max:3}}>
-      <div style={{height: 300}}>
+      <div style={{height: 400}}>
         {/* <div style={insideStyles}>Dynamic Blur</div> */}
       </div>
     </Parallax>
     <div className="ThreeThings-div">
           <ThreeThings/>
           </div>
-    <Parallax bgImage={img3} strength={-100}>
+    <Parallax bgImage={img3} strength={-300}>
       <div style={{height: 500}}>
         {/* <div style={insideStyles}>Reverse direction</div> */}
       </div>
     </Parallax>
-    <div style={{height: 500}}>
-      </div>
   </div>
 );
 export default ParallaxComponent;

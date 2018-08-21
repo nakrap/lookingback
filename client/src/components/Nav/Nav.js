@@ -4,21 +4,21 @@ import { Link } from "react-router-dom";
 
 
 class Nav extends Component {
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-}
+//   componentDidMount() {
+//     window.addEventListener('scroll', this.handleScroll);
+// }
 
-componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-}
-handleScroll(event) {
-    if (window.scrollY === 0 && this.state.scrolling === true) {
-        this.setState({scrolling: false});
-    }
-    else if (window.scrollY !== 0 && this.state.scrolling !== true) {
-        this.setState({scrolling: true});
-    }
-};
+// componentWillUnmount() {
+//     window.removeEventListener('scroll', this.handleScroll);
+// }
+// handleScroll(event) {
+//     if (window.scrollY === 0 && this.state.scrolling === true) {
+//         this.setState({scrolling: false});
+//     }
+//     else if (window.scrollY !== 0 && this.state.scrolling !== true) {
+//         this.setState({scrolling: true});
+//     }
+// };
   // <nav>
   //     <div className="ui inverted vertical center aligned segment" id="whole">
   //       <div className="ui container-fluid">
