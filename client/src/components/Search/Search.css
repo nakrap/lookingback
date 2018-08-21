@@ -1,0 +1,18 @@
+.ui.input {
+    margin-left: 35%;
+    margin-right: 30%;
+    position: relative;
+    bottom: 100px;
+}
+
+#search-area {
+    padding-right: 80px;
+    color:#BCBABE;
+}
+
+.ui.ui.button.search-btn.search-btn {
+    padding-left: 40px;
+    padding-right: 40px;
+    background: #A1D6E2;
+    color:#1995AD;
+}
