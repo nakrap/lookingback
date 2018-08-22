@@ -9,6 +9,7 @@ import Carousel from "../../components/Carousel";
 // import Jumbotron from "../../components/Jumbotron";
 import Steps from "../../components/Steps";
 import ThreeThings from "../../components/ThreeThings"
+import ParallaxComponent from "../../components/Parallax/Parallax";
 class Homepage extends Component {
   state = {
     books: [],
@@ -26,16 +27,18 @@ class Homepage extends Component {
   render() {
     return (
      <div>
-        <Nav />
-        <div className="carousel-div">
+        <Nav style={{color: '#06DCD6', borderWidth: 0, position: this.state.scrolling ? 'fixed' : 'relative', top: 0, width: '100vw', zIndex: 1}}
+/>
+        <ParallaxComponent/>
+        {/* <div className="carousel-div">
           <Carousel/>
-          </div>
-          <div className="steps-div">
+          </div> */}
+          {/* <div className="steps-div">
           <Steps/>
-          </div>
-          <div className="ThreeThings-div">
+          </div> */}
+          {/* <div className="ThreeThings-div">
           <ThreeThings/>
-          </div>
+          </div> */}
       </div>
     );
   }

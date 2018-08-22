@@ -1,6 +1,6 @@
 .column{
     margin-top: 20px;
-    border: black 1px solid;
+    /* border: black 1px solid; */
 }
 
 .topWrapper{
@@ -17,9 +17,9 @@
     padding: 25px 55px 25px 55px;
 
 }
-img{
+/* img{
     max-height: 300px;
-}
+} */
 
 .bio{
     padding: 0px 0px 100px 350px;

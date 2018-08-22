@@ -2,7 +2,7 @@ import React from "react";
 import "./Steps.css";
 
 const Steps = props => (
-  <div class="ui three column center aligned stackable grid container">
+  <div  id="steps-column" class="ui three column center aligned stackable grid container">
   <div class="column">
     <img class="ui centered small circular image" src="http://www.txstate.edu/cachee573b69ce9465908a27e25de0df62a92/imagehandler/scaler/gato-docs.its.txstate.edu/jcr:bb4d517e-7d5c-41fb-866b-b547ba49dfbc/Step%2B1.png?mode=fit&amp;width=234" />
     <h1 class="ui header">
