@@ -1,13 +1,16 @@
-.ui.input {
-    margin-left: 35%;
-    margin-right: 30%;
-    position: relative;
-    bottom: 100px;
+.ui.input.search {
+    /* margin-left: 35%;
+    margin-right: 30%; */
+    /* position: relative; */
+    bottom:250px;
+    font-size: 20px;
+    /* text-align: center; */
 }
 
 #search-area {
     padding-right: 80px;
     color:#BCBABE;
+    border-radius: 5px 0px 0px 5px;
 }
 
 .ui.ui.button.search-btn.search-btn {
@@ -15,4 +18,10 @@
     padding-right: 40px;
     background: #A1D6E2;
     color:#1995AD;
+    border-radius: 0px 5px 5px 0px;
+
+}
+
+.ui.search {
+    text-align: center;
 }

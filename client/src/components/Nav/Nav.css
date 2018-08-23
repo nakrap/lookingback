@@ -14,5 +14,13 @@ div.ui.top.fixed.menu {
 
 a.nav-link {
     color: whitesmoke;
-    margin-left: 10px;
+    margin-left: 20px;
+}
+
+.nav-items{
+    font-size: 18px;
+    text-shadow: 0px 0px 10px black;
+}
+.nav-items:hover{
+    font-size: 22px;
 }
