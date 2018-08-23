@@ -3,9 +3,11 @@
 /* Basic style for some HTML elements */
 #steps-column {
   margin-top: 20px;
-  background: whitesmoke;
+  background: transparent;
   border: whitesmoke;
+  
 }
+
 
 
 body {
@@ -259,9 +261,16 @@ nav.ui.menu {
   .ui.grid .ui.stackable.grid {
     margin-left: 0 !important;
     margin-right: 0 !important; } }
+    
 .steps-div {
-  background: whitesmoke;
+  background: rgb(25,149,173);
+  background: linear-gradient(90deg, rgba(25,149,173,1) 0%, rgba(161,214,226,1) 35%, rgba(255,255,255,1) 100%);
   padding-bottom: 25px;
   padding-top: 25px;
 }
+
+.steps-column {
+  background: transparent;
+}
+
 

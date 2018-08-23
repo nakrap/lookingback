@@ -14,7 +14,11 @@ div.ui.top.fixed.menu {
 
 a.nav-link {
     color: whitesmoke;
+<<<<<<< HEAD
     margin-left: 10px;
+=======
+    margin-left: 20px;
+>>>>>>> dev
 }
 
 .nav-items{

@@ -13,12 +13,17 @@ import CreatePage from "./pages/CreatePage";
 
 
 
+
 class App extends Component {
   render() {
     return (
       <Router>
       <div>
+<<<<<<< HEAD
         <Nav/>
+=======
+        <Nav />
+>>>>>>> dev
         <Switch>
         <Route exact path="/" component={Homepage} />
         <Route exact path="/home" component={Homepage} />
