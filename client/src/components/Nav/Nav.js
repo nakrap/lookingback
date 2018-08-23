@@ -19,39 +19,31 @@ class Nav extends Component {
 //         this.setState({scrolling: true});
 //     }
 // };
-  // <nav>
-  //     <div className="ui inverted vertical center aligned segment" id="whole">
-  //       <div className="ui container-fluid">
-  //         <div className="ui black inverted borderless huge fluid menu">
-  //           <a className="header item" href="/">LookingBack</a>
-  //           <a className="active item" href= "/home">Home</a>
-  //           <a className="item" href="/browse">Browse</a>
-  //           <a className="item">Contact</a>
-  //           <a className="item" href="/dashboard">Login</a>
-  //         </div>
-  //       </div>
-  //   </div>
-
-  // </nav>
+ 
   render () {
     return(
       <div id="fixed top menu" class="ui top fixed menu">
       <div class="ui container navbar">
-        <Link to="/home" className="nav-link">
+        <Link to="/home" className="nav-link nav-items">
                 Home
               </Link>
-              <Link to="/browse" className="nav-link">
-                browse
+              <Link to="/browse" className="nav-link nav-items">
+                Browse
               </Link>
-              <Link to="/home" className="nav-link">
-                Home
+              <Link to="/create" className="nav-link nav-items">
+                Create
               </Link>
+
         <div class="right menu">
-        <Link to="/dashboard" className="nav-link">
-                login
+            <Link to="/dashboard" className="nav-link nav-items">
+                My Page
               </Link>
-              <Link to="/home" className="nav-link">
-                register
+            <Link to="/login" className="nav-link nav-items">
+                Login
+              </Link>
+
+              <Link to="/signup" className="nav-link nav-items">
+                Sign Up
               </Link>
         </div>
       </div>

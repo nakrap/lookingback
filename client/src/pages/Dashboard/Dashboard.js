@@ -15,7 +15,6 @@ class Dashboard extends Component {
   render() {
     return (
      <div>
-        <Nav />
           <Welcome name='Jeff' />
           <PictureBanner banner={banner}/>
           <Follow/>

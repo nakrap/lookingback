@@ -12,26 +12,26 @@ const Footer = () => (
           <div className="column left-column">
             {/* <img id="logo" alt='logo' src={logo}/> */}
               LookingBack
-              <p  id='footer-text'>A way to memorialize your loved ones</p>
+              <p  id='lb-text'>A way to memorialize your loved ones</p>
               <p>Created with the sole purpose of preserving forever lasting memories</p>
 
           
           </div>
-          <div className="column mid-column">
+          <div className="column mid-column" >
             Contributors
-            <p id='footer-text'>
-               <a href="https://github.com/scottgall">Scott Gall</a>
+            <p id="contributor-text">
+               <a className='footer-link' href="https://github.com/scottgall">Scott Gall</a>
                <br></br>
-               <a href="https://github.com/nakrap">Nick Akrup</a>
+               <a className='footer-link' href="https://github.com/nakrap">Nick Akrup</a>
                <br></br>
-               <a href="https://github.com/JeffVongkoth">Jeff Vongkoth</a>
+               <a className='footer-link' href="https://github.com/JeffVongkoth">Jeff Vongkoth</a>
                <br></br>
-               <a href="https://github.com/zankokou">Ken Huynh</a>
+               <a className='footer-link' href="https://github.com/zankokou">Ken Huynh</a>
                </p>
           </div>
           <div className="column right-column">Check Out the Code
-          <p id="footer-text">
-          <a  href="https://github.com/nakrap/lookingback">GitHub</a>
+          <p id="code-text">
+          <a className='footer-link' href="https://github.com/nakrap/lookingback">GitHub</a>
           </p>
           
           </div>
@@ -39,7 +39,7 @@ const Footer = () => (
       </div>
     </div>
 
-    <div className="ui container-fluid footer white">
+    <div className="ui container-fluid footer lower">
       <h4 className="white-footer text">All Rights Reserved</h4>
       <p className="description">Made with React</p>
 

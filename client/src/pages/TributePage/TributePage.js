@@ -25,7 +25,6 @@ class TributePage extends Component {
   render() {
       return (
      <div>
-        <Nav />
         <ProfilePic 
           name={this.state.friends[0].name}
           image={this.state.friends[0].image}

@@ -27,8 +27,8 @@ class Homepage extends Component {
   render() {
     return (
      <div>
-        <Nav style={{color: '#06DCD6', borderWidth: 0, position: this.state.scrolling ? 'fixed' : 'relative', top: 0, width: '100vw', zIndex: 1}}
-/>
+        {/* <Nav style={{color: '#06DCD6', borderWidth: 0, position: this.state.scrolling ? 'fixed' : 'relative', top: 0, width: '100vw', zIndex: 1}}
+/> */}
         <ParallaxComponent/>
         {/* <div className="carousel-div">
           <Carousel/>

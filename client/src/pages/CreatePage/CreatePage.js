@@ -23,7 +23,7 @@ class CreatePage extends Component {
     const { value } = this.state
     return (
     <div>
-        <Nav />
+
         
         <div className ="container container-create">
         <Header as='h2'>

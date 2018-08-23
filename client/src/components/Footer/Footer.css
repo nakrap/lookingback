@@ -5,8 +5,8 @@
 
 }
 
-.ui.container-fluid.footer.white{
-    background: white;
+.ui.container-fluid.footer.lower{
+    /* background: white; */
     height: 75px;
     text-align: center;
 }
@@ -31,15 +31,23 @@
     display: block;
 }
 
-#footer-text{
+#contributor-text{
     margin-top:10px;
 }
 
-a { 
+#lb-text{
+    margin-top:10px;
+}
+
+#code-text{
+    margin-top:10px;
+}
+
+.footer-link { 
     color: inherit; 
 } 
 
-a:hover 
+.footer-link:hover 
 {
     font-size: 16px;
     color: white; 

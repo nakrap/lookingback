@@ -7,7 +7,7 @@ class Browsepage extends Component {
     render() {
         return (
             <div>
-                <Nav/> 
+
                 <div className="search-div">
                 <Search/>
                 </div>
