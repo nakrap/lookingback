@@ -19,11 +19,7 @@ class App extends Component {
     return (
       <Router>
       <div>
-<<<<<<< HEAD
-        <Nav/>
-=======
         <Nav />
->>>>>>> dev
         <Switch>
         <Route exact path="/" component={Homepage} />
         <Route exact path="/home" component={Homepage} />

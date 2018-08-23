@@ -7,11 +7,6 @@ class Browsepage extends Component {
     
     render() {
         return (
-<<<<<<< HEAD
-            <div>
-
-                <div className="search-div">
-=======
             
             <div style={{background:"url(https://image.ibb.co/h1S0OK/pablo_7.png)", 
             backgroundRepeat: "no-repeat",
@@ -20,7 +15,6 @@ class Browsepage extends Component {
                 {/* <Nav />  */}
                 </div>
                 <div className="search-div"  style={{padding:"400px 0px 0px 0px", marginBottom:"0px"}}>
->>>>>>> dev
                 <Search/>
                 </div>
                 <h1 style={{color:"white",  textAlign:"center"}}>Reconnect with loved ones</h1>

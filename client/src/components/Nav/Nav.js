@@ -7,24 +7,6 @@ class Nav extends Component {
   constructor(props) {
     super(props);
 
-<<<<<<< HEAD
-// componentWillUnmount() {
-//     window.removeEventListener('scroll', this.handleScroll);
-// }
-// handleScroll(event) {
-//     if (window.scrollY === 0 && this.state.scrolling === true) {
-//         this.setState({scrolling: false});
-//     }
-//     else if (window.scrollY !== 0 && this.state.scrolling !== true) {
-//         this.setState({scrolling: true});
-//     }
-// };
- 
-  render () {
-    return(
-      <div id="fixed top menu" class="ui top fixed menu">
-      <div class="ui container navbar">
-=======
     this.state = {
       isTop: true
     };
@@ -52,22 +34,17 @@ class Nav extends Component {
     return(
       <div id="fixed top menu" class="ui top fixed menu">
       <div class="ui container navbar" style={{}}>
->>>>>>> dev
         <Link to="/home" className="nav-link nav-items">
                 Home
               </Link>
               <Link to="/browse" className="nav-link nav-items">
                 Browse
-<<<<<<< HEAD
               </Link>
               <Link to="/create" className="nav-link nav-items">
                 Create
-=======
->>>>>>> dev
               </Link>
 
         <div class="right menu">
-<<<<<<< HEAD
             <Link to="/dashboard" className="nav-link nav-items">
                 My Page
               </Link>
@@ -77,13 +54,6 @@ class Nav extends Component {
 
               <Link to="/signup" className="nav-link nav-items">
                 Sign Up
-=======
-        <Link to="/dashboard" className="nav-link nav-items">
-                Login
-              </Link>
-              <Link to="/signup" className="nav-link nav-items">
-                Sign up
->>>>>>> dev
               </Link>
         </div>
       </div>
