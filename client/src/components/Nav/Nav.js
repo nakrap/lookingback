@@ -40,12 +40,20 @@ class Nav extends Component {
               <Link to="/browse" className="nav-link nav-items">
                 Browse
               </Link>
+              <Link to="/create" className="nav-link nav-items">
+                Create
+              </Link>
+
         <div class="right menu">
-        <Link to="/dashboard" className="nav-link nav-items">
+            <Link to="/dashboard" className="nav-link nav-items">
+                My Page
+              </Link>
+            <Link to="/login" className="nav-link nav-items">
                 Login
               </Link>
+
               <Link to="/signup" className="nav-link nav-items">
-                Sign up
+                Sign Up
               </Link>
         </div>
       </div>

@@ -37,7 +37,7 @@ class CommentForm extends React.Component {
             <textarea type="text" placeholder="Your name" className="form-control" /> */}
           </div>
           <div className="input-group comment-area">          
-            <img class="ui avatar image comment-avatar" src={frame}/>
+            {/* <img class="ui avatar image comment-avatar" src={frame}/> */}
 
             <span><textarea id="comment" type="text" placeholder="Comment" className="form-control" /></span>
           </div>

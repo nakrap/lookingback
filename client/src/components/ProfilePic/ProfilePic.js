@@ -12,15 +12,8 @@ render(){
         <div className="container-fluid topWrapper">
             <div className="container">
                 <div className=" picture">
-                <Modal trigger={<img className="ui medium rounded image pic" src={this.props.image}/>}>
-                 <ModalBox
-                    image={this.props.image}
-                    />    
-                </Modal>
+                <img className="ui medium rounded image pic" src={this.props.image}/>
                 </div>
-
-
-
                 <div className="bio">
                     <h1 className='name'>{this.props.name}</h1>
                     <p className='birthday'>{this.props.birthday}</p>

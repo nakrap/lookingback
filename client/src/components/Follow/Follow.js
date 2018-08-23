@@ -27,7 +27,7 @@ class Follow extends React.Component {
     const showFollowers = this.state.showFollowers;
     return(
       <div className="ui container center aligned">
-        <h1><a onClick={this.following}>Following</a> | <a onClick={this.toFollow}>People to Follow</a></h1>
+        <h1><span onClick={this.following}>Following</span> | <span onClick={this.toFollow}>People to Follow</span></h1>
 
         {showFollowers ? (
           <div>
