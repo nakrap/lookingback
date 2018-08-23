@@ -25,7 +25,7 @@ class CreatePage extends Component {
     <div>
         <Nav />
         
-        <div className ="container">
+        <div className ="container container-create">
         <Header as='h2'>
           <Icon name='user circle' />
           <Header.Content>

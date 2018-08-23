@@ -1,3 +1,47 @@
-footer{
-    margin-top: 30px;
+.ui.container-fluid.footer.black{
+    background: #0d141b;
+    height: 250px;
+    text-align: center;
+
+}
+
+.ui.container-fluid.footer.white{
+    background: white;
+    height: 75px;
+    text-align: center;
+}
+
+.white-footer.text{
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.description{
+    color: black;   
+}
+
+.left-column, .mid-column, .right-column{
+    color: white;
+    /* border: 1px solid white; */
+}
+
+#logo{
+    height: 50px;
+    width: 50px;
+    display: block;
+}
+
+#footer-text{
+    margin-top:10px;
+}
+
+a { 
+    color: inherit; 
+} 
+
+a:hover 
+{
+    font-size: 16px;
+    color: white; 
+    text-decoration: underline;
 }
