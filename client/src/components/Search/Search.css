@@ -1,6 +1,6 @@
 .ui.input.search-bar {
-    margin-left: 35%;
-    margin-right: 30%;
+    /* margin-left: 35%;
+    margin-right: 30%; */
     position: relative;
     bottom: 100px;
 }
@@ -15,4 +15,8 @@
     padding-right: 40px;
     background: #A1D6E2;
     color:#1995AD;
+}
+
+.ui.search{
+    text-align: center;
 }
