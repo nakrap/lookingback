@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 // import Detail from "./pages/Detail";
 // import NoMatch from "./pages/NoMatch";
-// import Nav from "./components/Nav";
+import Nav from "./components/Nav";
 // import Carousal from "./components/Carousal";
 import Footer from "./components/Footer";
 import Homepage from "./pages/Homepage";
@@ -13,11 +13,13 @@ import CreatePage from "./pages/CreatePage";
 
 
 
+
 class App extends Component {
   render() {
     return (
       <Router>
       <div>
+        <Nav />
         <Switch>
         <Route exact path="/" component={Homepage} />
         <Route exact path="/home" component={Homepage} />

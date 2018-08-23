@@ -15,7 +15,7 @@ const Steps = props => (
   <div class="column">
     <img class="ui centered small circular image" src="http://www.txstate.edu/cachee573b69ce9465908a27e25de0df62a92/imagehandler/scaler/gato-docs.its.txstate.edu/jcr:b633724f-ac00-443f-aa4c-6248cd890cb7/Step%2B2.png?mode=fit&amp;width=234" />
     <h1 class="ui header">
-      Share memories with loved ones
+      Share memories
     </h1>
     <p>
       Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.

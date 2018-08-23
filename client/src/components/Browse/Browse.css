@@ -16,7 +16,9 @@
     text-align: center;
     background:#6CADDC;
   } */
-
+.search-results {
+  text-align: center;
+}
   .card {
     background: #fff;
     border-radius: 2px;

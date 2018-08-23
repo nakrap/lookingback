@@ -8,7 +8,7 @@ class Browse extends Component {
     };
     render() {
         return (
-            <div>
+            <div className="search-results" >
                 {this.state.friends.map(friend => (
                     <Cards
                         id={friend.id}
