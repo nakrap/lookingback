@@ -71,8 +71,8 @@ blockquote {
   blockquote cite:after {
     content: "»"; }
 
-img {
-  width: 100%; }
+/* img {
+  width: 100%; } */
   img.logo {
     width: 200px;
     margin: 3rem 0 1rem; }
