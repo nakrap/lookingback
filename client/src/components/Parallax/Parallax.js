@@ -4,6 +4,7 @@ import { Parallax } from 'react-parallax';
 import Search from "../Search/Search";
 import ThreeThings from "../ThreeThings/ThreeThings";
 import Steps from "../Steps/Steps";
+import QuoteSnippet from "../QuoteSnippet/QuoteSnippet";
 
 const insideStyles = {background: 'white', padding: 20, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)'};
 
@@ -18,11 +19,14 @@ const img6 = "https://image.ibb.co/gekJaz/pablo_6.png";
 // https://image.ibb.co/gekJaz/pablo_6.png
 const ParallaxComponent = () => (
 <div>
+
     <Parallax bgImage={img4}
-      strength={100}>
+      strength={200}>
       <div style={{height: 500}}></div>
+      <QuoteSnippet style={{color:"white"}}/>
       <div className="search-div">
       <Search/>
+      
       </div>
       <div className="steps-div">
           <Steps/>
@@ -32,6 +36,8 @@ const ParallaxComponent = () => (
       <div style={{height: 400}}>
         {/* <div style={insideStyles}>Dynamic Blur</div> */}
       </div>
+      <QuoteSnippet style={{color:"white"}}/>
+
     </Parallax>
     <div className="ThreeThings-div">
           <ThreeThings/>
@@ -40,6 +46,8 @@ const ParallaxComponent = () => (
       <div style={{height: 500}}>
         {/* <div style={insideStyles}>Reverse direction</div> */}
       </div>
+      <QuoteSnippet style={{color:"white"}}/>
+
     </Parallax>
   </div>
 );
