@@ -27,11 +27,11 @@ class Follow extends React.Component {
     const showFollowers = this.state.showFollowers;
     return(
       <div className="ui container center aligned">
-        <h1><span onClick={this.following}>Following</span> | <span onClick={this.toFollow}>People to Follow</span></h1>
+        <h1><span onClick={this.following}>My Tribute Pages</span> | <span onClick={this.toFollow}>My Contributions</span></h1>
 
         {showFollowers ? (
           <div>
-            <h1>People you are Following</h1> 
+            <h1>Tributes Created By You</h1> 
             
             {this.state.friends.map(friend => (
             <Cards
@@ -44,7 +44,7 @@ class Follow extends React.Component {
           </div>   
       ) : (
         <div>
-        <h1>People to Follow</h1> 
+        <h1>Tributes You've Added To </h1> 
         
         {this.state.friends.map(friend => (
         <Cards

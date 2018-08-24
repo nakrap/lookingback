@@ -33,7 +33,7 @@ class Nav extends Component {
   render () {
     return(
       <div id="fixed top menu" class="ui top fixed menu">
-      <div class="ui container navbar" style={{}}>
+      <div id="navbar" className="ui container navbar" style={{margin:0}}>
         <Link to="/home" className="nav-link nav-items">
                 Home
               </Link>
@@ -44,7 +44,7 @@ class Nav extends Component {
                 Create
               </Link>
 
-        <div class="right menu">
+        <div className="right menu">
             <Link to="/dashboard" className="nav-link nav-items">
                 My Page
               </Link>

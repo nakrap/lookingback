@@ -25,3 +25,11 @@
 .ui.search {
     text-align: center;
 }
+
+#lbLogo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 28%;
+    margin-bottom: 180px;
+}
