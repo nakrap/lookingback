@@ -24,7 +24,7 @@ const ParallaxComponent = () => (
       <div className="search-div">
       <Search/>
       </div>
-      <div className="steps-div">
+      <div className="steps-div" style={{padding:120}}>
           <Steps/>
           </div>
     </Parallax>

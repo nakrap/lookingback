@@ -273,4 +273,6 @@ nav.ui.menu {
   background: transparent;
 }
 
-
+#steps-column{
+  font-size:18px;
+}

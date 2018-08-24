@@ -8,6 +8,39 @@
   dependencies:
     regenerator-runtime "^0.12.0"
 
+"@fortawesome/fontawesome-common-types@^0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.1.7.tgz#4336c4b06d0b5608ff1215464b66fcf9f4795284"
+
+"@fortawesome/fontawesome-common-types@^0.2.0-9":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.2.tgz#7fd64eacf7f64e4d7619d21b0b2f2467f5a70611"
+
+"@fortawesome/fontawesome-svg-core@^1.2.0-14":
+  version "1.2.0-14"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.0-14.tgz#48100da29b39658fad374ebd1386161ab35af564"
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.0-9"
+
+"@fortawesome/fontawesome@^1.1.8":
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome/-/fontawesome-1.1.8.tgz#75fe66a60f95508160bb16bd781ad7d89b280f5b"
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.1.7"
+
+"@fortawesome/free-solid-svg-icons@^5.1.0-11":
+  version "5.1.0-11"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.1.0-11.tgz#4a346eaada93276edb133b140492e8d7cfa2aa47"
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.0-9"
+
+"@fortawesome/react-fontawesome@^0.1.0-11":
+  version "0.1.0-11"
+  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.1.0-11.tgz#83299a5c09bec79522abba33e93bff796f2f6d4e"
+  dependencies:
+    humps "^2.0.1"
+    prop-types "^15.5.10"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -921,6 +954,10 @@ follow-redirects@^1.2.3:
   dependencies:
     debug "^3.1.0"
 
+font-awesome@^4.7.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
+
 for-in@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
@@ -1110,6 +1147,10 @@ http-errors@1.6.3, http-errors@~1.6.2, http-errors@~1.6.3:
     inherits "2.0.3"
     setprototypeof "1.1.0"
     statuses ">= 1.4.0 < 2"
+
+humps@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/humps/-/humps-2.0.1.tgz#dd02ea6081bd0568dc5d073184463957ba9ef9aa"
 
 iconv-lite@0.4.19:
   version "0.4.19"
@@ -1964,7 +2005,7 @@ progress@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.0.tgz#8a1be366bf8fc23db2bd23f10c6fe920b4389d1f"
 
-prop-types@^15.6.1:
+prop-types@^15.5.10, prop-types@^15.6.1:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.2.tgz#05d5ca77b4453e985d60fc7ff8c859094a497102"
   dependencies:
@@ -2036,6 +2077,10 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     ini "~1.3.0"
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
+
+react-icons@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-3.0.5.tgz#9f22a319a48b562e052af2255a3dda8ded363d1c"
 
 react-parallax@^1.8.0:
   version "1.8.0"
