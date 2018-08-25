@@ -20,18 +20,18 @@ const Footer = () => (
           <div className="column mid-column" >
             Contributors
             <p id="contributor-text">
-               <a className='footer-link' href="https://github.com/scottgall">Scott Gall</a>
+               <a target="_blank" className='footer-link' href="https://github.com/scottgall">Scott Gall</a>
                <br></br>
-               <a className='footer-link' href="https://github.com/nakrap">Nick Akrup</a>
+               <a target="_blank" className='footer-link' href="https://github.com/nakrap">Nick Akrup</a>
                <br></br>
-               <a className='footer-link' href="https://github.com/JeffVongkoth">Jeff Vongkoth</a>
+               <a target="_blank" className='footer-link' href="https://github.com/JeffVongkoth">Jeff Vongkoth</a>
                <br></br>
-               <a className='footer-link' href="https://github.com/zankokou">Ken Huynh</a>
+               <a target="_blank" className='footer-link' href="https://github.com/zankokou">Ken Huynh</a>
                </p>
           </div>
           <div className="column right-column">Check Out the Code
           <p id="code-text">
-          <a className='footer-link' href="https://github.com/nakrap/lookingback">GitHub</a>
+          <a target="_blank" className='footer-link' href="https://github.com/nakrap/lookingback">GitHub</a>
           </p>
           
           </div>

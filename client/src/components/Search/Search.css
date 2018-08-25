@@ -11,6 +11,7 @@
     padding-right: 80px;
     color:#BCBABE;
     border-radius: 5px 0px 0px 5px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .ui.ui.button.search-btn.search-btn {
@@ -19,9 +20,18 @@
     background: #A1D6E2;
     color:#1995AD;
     border-radius: 0px 5px 5px 0px;
+    font-family: 'Open Sans', sans-serif;
 
 }
 
 .ui.search {
     text-align: center;
+}
+
+#lbLogo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 28%;
+    margin-bottom: 180px;
 }
