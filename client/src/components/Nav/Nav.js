@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Nav.css";
 import { Link } from "react-router-dom";
+import logo from "./lookBackLogo600x600.png";
 
 
 class Nav extends Component {
@@ -37,7 +38,9 @@ class Nav extends Component {
 
   render () {
     return(
-      <div id="fixed top menu" class="ui top fixed menu" style={{transition:"all 0.3s", webkitTransition:"all 0.3s", background: this.state.background}}>
+      <div id="fixed top menu" className="ui top fixed menu" style={{transition:"all 0.3s", webkitTransition:"all 0.3s", background: this.state.background}}>
+      <img id='navLogo' src={logo}/>  
+
       <div id="navbar" className="ui container navbar">
         <Link to="/home" className="nav-link nav-items" style={{color:this.state.color}}>
                 Home

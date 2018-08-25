@@ -1,6 +1,5 @@
 import React from "react";
 import "./Search.css";
-import logo from "./lookBackLogoNEW.png";
 import logo2 from "./lookBackLogo600x600.png";
 
 

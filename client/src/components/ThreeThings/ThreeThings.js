@@ -3,55 +3,55 @@ import "./ThreeThings.css";
 
 const ThreeThings = props => (
     
-    <div class="ui grid container">
-  <div class="ui relaxed divided items">
-    <div class="item">
-      <div class="middle aligned content">
-        <h1 class="ui header">
-        Always Remember 
-        {/* <span class="disabled">It'll blow your mind.</span> */}
+    <div className="ui grid container">
+  <div className="ui relaxed divided items">
+    <div className="item">
+      <div className="middle aligned content">
+        <h1 className="ui header">
+        Always Remember... 
+        {/* <span className="disabled">It'll blow your mind.</span> */}
         </h1>
-        <div class="description">
-          <p>
-            A revolutionary way to remember loved ones and friends
+        <div className="description">
+          <p className="info-text">
+            A revolutionary way to remember loved ones 
           </p>
         </div>
       </div>
-      <div class="ui right floated large image">
+      <div className="ui right floated large image">
         <img src="http://placekitten.com/g/400/200" />
       </div>
     </div>
-    <div class="item">
-      <div class="ui large image">
+    <div className="item">
+      <div className="ui large image">
         <img src="http://placekitten.com/g/400/200" />
       </div>
-      <div class="middle aligned content">
-        <h1 class="ui header">
-        Keep memories alive forever 
-         {/* <span class="disabled">it's that good.</span> */}
+      <div className="middle aligned content">
+        <h1 className="ui header">
+        Everlasting Memories...
+         {/* <span className="disabled">it's that good.</span> */}
         </h1>
-        <div class="description">
-          <p>
+        <div className="description">
+          <p className="info-text">
           Share precious moments with friends and loved ones
-	Through an easy to use interface
+	        through an easy to use interface
 
           </p>
         </div>
       </div>
     </div>
-    <div class="item">
-      <div class="middle aligned content">
-        <h1 class="ui header">
-        Build a connection web 
-          {/* <span class="disabled">this one.</span> */}
+    <div className="item">
+      <div className="middle aligned content">
+        <h1 className="ui header">
+        Build Your Family Tree...
+          {/* <span className="disabled">this one.</span> */}
         </h1>
-        <div class="description">
-          <p>
+        <div className="description">
+          <p className="info-text">
           Through the process of connecting with loved ones and friends you build connections which can expand your circle of memories
           </p>
         </div>
       </div>
-      <div class="ui right floated large image">
+      <div className="ui right floated large image">
         <img src="http://placekitten.com/g/400/200" />
       </div>
     </div>

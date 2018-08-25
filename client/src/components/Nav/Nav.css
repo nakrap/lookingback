@@ -1,6 +1,6 @@
 div.ui.container.navbar {
-    /* margin-top:0px;
-    margin-bottom:10px; */
+    margin-top:0px;
+    margin-bottom:10px; 
     padding-top: 20px;
     padding-bottom: 15px;
     height:60px;
@@ -32,7 +32,26 @@ a.nav-link {
 
 #navbar{
     /* background:pink; */
+    margin-top: 15px !important;
     width: 100%;
-    margin-left: 10px !important;
+    margin-left: -20px !important;
     margin-right: 10px !important;
 }
+#test{
+    color: white;
+}
+
+.changeColor {
+    background: pink;
+ }
+
+ #navLogo{
+     /* display: inline; */
+     float:left;
+     width: 4%;
+     height: 4%;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     margin-left: 25px;
+     margin-right: 0px;
+ }
