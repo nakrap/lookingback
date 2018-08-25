@@ -1,6 +1,6 @@
 import React from "react";
 import "./Search.css";
-import logo from "./lookBackLogoNEW.png";
+import logo from "./lookBackLogo600x600.png";
 
 
 const Search = () => (

@@ -2,7 +2,7 @@
     /* margin-left: 35%;
     margin-right: 30%; */
     /* position: relative; */
-    bottom:250px;
+    bottom:125px;
     font-size: 20px;
     /* text-align: center; */
 }
@@ -30,6 +30,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 28%;
-    margin-bottom: 180px;
+    width: 22%;
+    margin-top: 80px;
+    margin-bottom: 160px;
 }
