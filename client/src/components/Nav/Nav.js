@@ -39,6 +39,8 @@ class Nav extends Component {
   render () {
     return(
       <div id="fixed top menu" className="ui top fixed menu" style={{transition:"all 0.3s", webkitTransition:"all 0.3s", background: this.state.background}}>
+      <img id='navLogo' src={logo}/>  
+
       <div id="navbar" className="ui container navbar">
         <Link to="/home" className="nav-link nav-items" style={{color:this.state.color}}>
                 Home
