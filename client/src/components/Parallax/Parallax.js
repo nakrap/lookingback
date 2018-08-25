@@ -23,7 +23,7 @@ const ParallaxComponent = () => (
 
     <Parallax bgImage={img4}
       strength={100}>
-      <div className="search-div center">
+      <div className="search-div center"  style={{height: 500}}>
       <Search/>
       </div>
       <div className="steps-div" style={{padding:120}}>
