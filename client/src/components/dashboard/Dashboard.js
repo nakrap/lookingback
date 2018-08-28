@@ -3,12 +3,19 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getCurrentProfile, deleteAccount } from '../../actions/profileActions';
+import { getCreatedTributes } from '../../actions/dashboardActions';
 import Spinner from '../common/Spinner';
 import ProfileActions from './ProfileActions';
+import ProfileItem from '../profiles/ProfileItem';
+import profileReducer from '../../reducers/profileReducer';
+import CreatedTributeItem from './CreatedTributeItem';
+import dashboardReducer from '../../reducers/dashboardReducer';
+
 
 class Dashboard extends Component {
   componentDidMount() {
-    this.props.getCurrentProfile();
+    // this.props.getCurrentProfile();
+    this.props.getCreatedTributes();
   }
 
   onDeleteClick(e) {
@@ -17,21 +24,34 @@ class Dashboard extends Component {
   
   render() {
     const { user } = this.props.auth;
-    const { profile, loading } = this.props.profile;
+    // const { profile, loading } = this.props.profile;
+    const { createdTributes, createdTributesLoading } = this.props.createdTributes;
 
     let dashboardContent;
 
-    if (profile === null || loading) {
+    if (createdTributes === null || createdTributesLoading) {
       dashboardContent = <Spinner />;
     } else {
       // check if loogged in user has profile data
-      if(Object.keys(profile).length > 0) {
+      if(Object.keys(createdTributes).length > 0) {
         dashboardContent = (
           <div>
-            <p className="lead text-muted">Welcome <Link to={`/profile/${profile[0].name}`}>{user.name}</Link></p>
-            <ProfileActions />
+            <p className="lead text-muted">Welcome {user.name}</p>
+            <h6>Your tribute pages:</h6>
+          
+            { createdTributes.map(tribute => (
+              <ProfileItem key={profileReducer._id} profile={tribute} />
+              // <h1>{tribute.name}</h1>
+            ))}
+
+            {/* <ProfileActions /> */}
             {/* TODO: exp and edu */}
-            <div style={{ marginBotton: '60px' }} />
+            <div>
+            <Link to="/create-profile" className="btn btn-lg btn-info">
+              Create Profile
+            </Link>
+            </div>
+            <div style={{ marginBottom: '60px' }} />
             <button onClick={this.onDeleteClick.bind(this)} className="btn btn-danger">Delete my account</button>
           </div>
         );
@@ -40,7 +60,7 @@ class Dashboard extends Component {
         dashboardContent = (
           <div>
             <p className="lead text-mute">Welcome { user.name }</p>
-            <p>You have not yet created a tribute page, please add some info</p>
+            <p>Click the button below to start creating a tribute page.</p>
             <Link to="/create-profile" className="btn btn-lg btn-info">
               Create Profile
             </Link>
@@ -65,15 +85,18 @@ class Dashboard extends Component {
 }
 
 Dashboard.propTypes = {
-  getCurrentProfile: PropTypes.func.isRequired,
+  // getCurrentProfile: PropTypes.func.isRequired,
+  getCreatedTributes: PropTypes.func.isRequired,
   deleteAccount: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  profile: PropTypes.object.isRequired
+  createdTributes: PropTypes.object.isRequired
+  // profile: PropTypes.object.isRequired
 }
 
 const mapStateToProps = state => ({
-  profile: state.profile,
+  // profile: state.profile,
+  createdTributes: state.createdTributes,
   auth: state.auth
 })
 
-export default connect(mapStateToProps, { getCurrentProfile, deleteAccount })(Dashboard);
+export default connect(mapStateToProps, { getCurrentProfile, deleteAccount, getCreatedTributes })(Dashboard);

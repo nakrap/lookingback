@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { loginUser } from '../../actions/authActions';
 import TextFieldGroup from '../common/TextFieldGroup';
 
+
 class Login extends Component {
   constructor() {
     super();
@@ -81,7 +82,7 @@ class Login extends Component {
                 <input type="submit" className="btn btn-info btn-block mt-4" />
               </form>
             </div>
-          </div>`
+          </div>
         </div>
       </div>
     )
