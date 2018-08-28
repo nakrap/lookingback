@@ -1,24 +1,49 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
-const routes = require("./routes");
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const passport = require('passport');
+const path = require('path');
+
+const users = require('./routes/api/users');
+const profile = require('./routes/api/profile');
+const posts = require('./routes/api/posts');
+
 const app = express();
-const PORT = process.env.PORT || 3001;
 
-// Define middleware here
-app.use(bodyParser.urlencoded({ extended: true }));
+// body parser middleware
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+
+// db config
+const db = require('./config/keys').mongoURI;
+
+// connect to mongodb
+mongoose
+    .connect(db)
+    .then(() => console.log('MongoDB Connected'))
+    .catch(err => console.log(err));
+
+// passport middleware
+app.use(passport.initialize());
+
+// passport config
+require('./config/passport')(passport);
+
+// use routes
+app.use('/api/users', users);
+app.use('/api/profile', profile);
+app.use('/api/posts', posts);
+
+// server static assets if in production
+if(process.env.NODE_ENV === 'production') {
+    // set static folder
+    app.use(express.static('client/build'));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    });
 }
-// Add routes, both API and view
-app.use(routes);
 
-// Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
+const port = process.env.PORT || 5000;
 
-// Start the API server
-app.listen(PORT, function() {
-  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
-});
+app.listen(port, () => console.log(`Server running on port ${port}`));
