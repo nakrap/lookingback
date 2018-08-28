@@ -4,6 +4,7 @@ import jwt_decode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
 import { setCurrentUser, logoutUser } from './actions/authActions';
 import { clearCurrentProfile } from './actions/profileActions';
+import { clearCreatedTributes } from './actions/dashboardActions';
 
 
 import { Provider } from 'react-redux';
@@ -43,7 +44,10 @@ if(localStorage.jwtToken) {
   if(decoded.exp < currentTime) {
     // logout user
     store.dispatch(logoutUser());
-    store.dispatch(clearCurrentProfile());
+    // clear created tributes
+    store.dispatch(clearCreatedTributes());
+    // clear current profile
+    // store.dispatch(clearCurrentProfile());
 
     // redirect to login
     window.location.href = '/login';
@@ -70,7 +74,7 @@ class App extends Component {
                 <PrivateRoute exact path="/create-profile" component={ CreateProfile } />
               </Switch>
               <Switch>
-                <PrivateRoute exact path="/edit-profile" component={ EditProfile } />
+                <PrivateRoute exact path="/edit-profile/:id" component={ EditProfile } />
               </Switch>
               <Switch>
                 <PrivateRoute exact path="/feed" component={ Posts } />

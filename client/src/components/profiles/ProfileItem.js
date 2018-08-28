@@ -2,10 +2,26 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import isEmpty from '../../validation/is-empty';
+import { connect } from 'react-redux';
+
 
 class ProfileItem extends Component {
   render() {
     const { profile } = this.props;
+    const { user } = this.props.auth;
+
+    let editLink;
+
+    if (profile.createdBy._id === user.id) {
+      editLink = (
+        <span>
+        <Link to={`/edit-profile/${profile._id}`} className="btn btn-warning">Edit Tribute</Link><p> </p></span>
+      )
+    } else {
+      editLink = (
+        <div>NOPE</div>
+      )
+    }
 
     return (
       <div className="card card-body bg-light mb-3">
@@ -22,6 +38,7 @@ class ProfileItem extends Component {
             <Link to={`/profile/${profile._id}`} className="btn btn-info">
               View Tribute
             </Link>
+            { editLink }
           </div>
         </div>
       </div>
@@ -31,7 +48,12 @@ class ProfileItem extends Component {
 }
 
 ProfileItem.propTypes = {
-  profile: PropTypes.object.isRequired
+  profile: PropTypes.object.isRequired,
+  auth: PropTypes.object.isRequired
 }
 
-export default ProfileItem;
+const mapStateToProps = state => ({
+  auth: state.auth
+})
+
+export default connect(mapStateToProps)(ProfileItem);
