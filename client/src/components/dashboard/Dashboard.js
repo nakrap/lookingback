@@ -48,7 +48,7 @@ class Dashboard extends Component {
             {/* TODO: exp and edu */}
             <div>
             <Link to="/create-profile" className="btn btn-lg btn-info">
-              Create Profile
+              Create Tribute
             </Link>
             </div>
             <div style={{ marginBottom: '60px' }} />
@@ -62,7 +62,7 @@ class Dashboard extends Component {
             <p className="lead text-mute">Welcome { user.name }</p>
             <p>Click the button below to start creating a tribute page.</p>
             <Link to="/create-profile" className="btn btn-lg btn-info">
-              Create Profile
+              Create Tribute
             </Link>
           </div>
         )
