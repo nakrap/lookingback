@@ -17,10 +17,6 @@ class ProfileItem extends Component {
         <span>
         <Link to={`/edit-profile/${profile._id}`} className="btn btn-warning">Edit Tribute</Link><p> </p></span>
       )
-    } else {
-      editLink = (
-        <div>NOPE</div>
-      )
     }
 
     return (
