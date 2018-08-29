@@ -17,7 +17,7 @@ class Dashboard extends Component {
     // this.props.getCurrentProfile();
     this.props.getCreatedTributes();
   }
-
+ 
   onDeleteClick(e) {
     this.props.deleteAccount();
   }
