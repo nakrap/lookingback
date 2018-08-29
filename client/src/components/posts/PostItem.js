@@ -60,7 +60,7 @@ class PostItem extends Component {
             <Link 
               to={`/post/${post._id}`} 
               className="btn btn-info mr-1">
-              Comments
+              View Post
             </Link>
             {post.user === auth.user.id ? (
               <button 
