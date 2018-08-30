@@ -37,3 +37,16 @@ img {
 .form-control::placeholder {
   color: #bbb !important;
 }
+
+.mb-4, .my-4 {
+  margin-bottom: 0 !important;
+}
+
+a, h1, h3, h4  {
+  font-family:'Poppins', sans-serif;
+}
+
+body {
+  background-color: #A1D6E2;
+  font-family: 'Roboto Slab', serif;
+}
