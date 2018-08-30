@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Parallax } from 'react-parallax';
-import Search from "../Search/Search";
+// import Search from "../Search/Search";
 import ThreeThings from "../ThreeThings/ThreeThings";
 import Steps from "../Steps/Steps";
 // import QuoteSnippet from "../QuoteSnippet/QuoteSnippet";
@@ -27,7 +27,7 @@ const ParallaxComponent = () => (
       strength={300}>
       <div style={{height: 550}}></div>
       <div className="search-div">
-      <Search/>
+      {/* <Search/> */}
       
       </div>
       <div className="steps-div" style={{padding:120}}>

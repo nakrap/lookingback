@@ -96,6 +96,12 @@ class Navbar extends Component {
                 Tributes
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/search">
+                {' '}
+                Search
+              </Link>
+            </li>
           </ul>
           {isAuthenticated ? authLinks : guestLinks}
         </div>

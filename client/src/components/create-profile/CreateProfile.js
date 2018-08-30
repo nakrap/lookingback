@@ -1,37 +1,52 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import TextFieldGroup from '../common/TextFieldGroup';
-import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
-import InputGroup from '../common/InputGroup';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
+import TextFieldGroup from "../common/TextFieldGroup";
+import TextAreaFieldGroup from "../common/TextAreaFieldGroup";
+import InputGroup from "../common/InputGroup";
+// import { render } from "react-dom";
+// import { image } from "cloudinary-react";
+// import { cloudinary } from "cloudinary-core";
+// import { cloudinary } from "cloudinary";
 // import SelectListGroup from '../common/SelectListGroup';
-import { createProfile } from '../../actions/profileActions';
+import { createProfile } from "../../actions/profileActions";
 
 class CreateProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
       displaySocialInputs: false,
-      name: '',
-      bio: '',
-      DOB: '',
-      img: '',
-      twitter: '',
-      facebook: '',
-      youtube: '',
-      instagram: '',
+      name: "",
+      bio: "",
+      DOB: "",
+      img: "",
+      twitter: "",
+      facebook: "",
+      youtube: "",
+      instagram: "",
       errors: {}
-    }
+    };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
-    if(nextProps.errors) {
-      this.setState({errors: nextProps.errors});
+    if (nextProps.errors) {
+      this.setState({ errors: nextProps.errors });
     }
   }
+
+  uploadWidget = () => {
+    window.cloudinary.openUploadWidget(
+      { cloud_name: "nakrap", upload_preset: "x2rmt9j3", tags: ["xmas"] },
+      (error, result) => {
+        this.setState({ img: result[0].url });
+        // console.log(result[0].url);
+        console.log(this.state.img);
+      }
+    );
+  };
 
   onSubmit(e) {
     e.preventDefault();
@@ -45,8 +60,8 @@ class CreateProfile extends Component {
       facebook: this.state.facebook,
       youtube: this.state.youtube,
       instagram: this.state.instagram
-    }
-
+    };
+    console.log(profileData);
     this.props.createProfile(profileData, this.props.history);
   }
 
@@ -95,7 +110,7 @@ class CreateProfile extends Component {
             error={errors.instagram}
           />
         </div>
-      )
+      );
     }
 
     return (
@@ -109,7 +124,7 @@ class CreateProfile extends Component {
               </p>
               <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
-                <TextFieldGroup 
+                <TextFieldGroup
                   placeholder="* name"
                   name="name"
                   value={this.state.name}
@@ -117,7 +132,7 @@ class CreateProfile extends Component {
                   error={errors.name}
                   info="first and last name of your loved one"
                 />
-                <TextFieldGroup 
+                <TextFieldGroup
                   placeholder="date of birth"
                   name="DOB"
                   type="date"
@@ -126,7 +141,7 @@ class CreateProfile extends Component {
                   error={errors.DOB}
                   info="date of birth"
                 />
-                <TextAreaFieldGroup 
+                <TextAreaFieldGroup
                   placeholder="bio"
                   name="bio"
                   value={this.state.bio}
@@ -135,40 +150,53 @@ class CreateProfile extends Component {
                   info="write some words about your loved one"
                 />
                 <div className="mb-3">
-                  <button 
-                  type="button"
-                  onClick={() => {
-                    this.setState(prevState => ({
-                      displaySocialInputs: !prevState.displaySocialInputs
-                    }))
-                  }} className="btn btn-light">
-                  Add Social Network Links
+                  <button
+                    type="button"
+                    onClick={() => {
+                      this.setState(prevState => ({
+                        displaySocialInputs: !prevState.displaySocialInputs
+                      }));
+                    }}
+                    className="btn btn-light"
+                  >
+                    Add Social Network Links
                   </button>
                   <span className="text-muted">Optional</span>
                 </div>
                 {socialInputs}
-                <input 
-                  type="submit" 
-                  value="Submit" 
-                  className="btn btn-info btn-block mt-4" 
+                <input
+                  type="submit"
+                  value="Submit"
+                  className="btn btn-info btn-block mt-4"
                 />
               </form>
+              <div className="upload">
+                <button
+                  onClick={this.uploadWidget.bind(this)}
+                  className="upload-button"
+                >
+                  Add Image
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
 CreateProfile.propTypes = {
   profile: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired
-}
+};
 
 const mapStateToProps = state => ({
   profile: state.profile,
   errors: state.errors
-})
+});
 
-export default connect(mapStateToProps, { createProfile })(withRouter(CreateProfile));
+export default connect(
+  mapStateToProps,
+  { createProfile }
+)(withRouter(CreateProfile));
