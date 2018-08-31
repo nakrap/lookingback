@@ -1,9 +1,9 @@
 .footer-wrapper{
-    background: #0d141b;
+    background: black;
     height: 220px;
     text-align: center;
     padding: 35px;
-    margin-top: 25px;
+    /* margin-top: 25px; */
 }
 
 
