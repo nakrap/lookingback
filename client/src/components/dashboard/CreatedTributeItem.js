@@ -11,8 +11,10 @@ class CreatedTributeItem extends Component {
       <div className="card card-body bg-light mb-3">
         <div className="row">
           <div className="col-2">
-            <img src={isEmpty(createdTributes.img) ?  "//www.gravatar.com/avatar/e28f6f64608c970c663197d7fe1f5a59?s=200&r=pg&d=mm" : createdTributes.avatar}/>
+          <img src={`${createdTributes.img}`} className="rounded-circle"/>
+            <img src={isEmpty(createdTributes.img) ?  "//www.gravatar.com/avatar/e28f6f64608c970c663197d7fe1f5a59?s=200&r=pg&d=mm" : createdTributes.img}/>
             {/* <img src={profile.avatar} className="rounded-circle"/> */}
+
           </div>
           <div className="col-lg-6 col-md-4 col-8">
             <h3>{createdTributes.name}</h3>
