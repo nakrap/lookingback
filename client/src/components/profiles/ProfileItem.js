@@ -15,7 +15,7 @@ class ProfileItem extends Component {
     if (profile.createdBy._id === user.id) {
       editLink = (
         <span>
-        <Link to={`/edit-profile/${profile._id}`} className="btn btn-warning">Edit Tribute</Link><p> </p></span>
+        <Link to={`/edit-profile/${profile._id}`} className="btn btn-outline-dark">Edit Tribute</Link><p> </p></span>
       )
     }
 
@@ -31,7 +31,7 @@ class ProfileItem extends Component {
             <p>
               {isEmpty(profile.DOB) ? null : (<span>{profile.DOB}</span>)}
             </p>
-            <Link to={`/profile/${profile._id}`} className="btn btn-info">
+            <Link  to={`/profile/${profile._id}`} className="btn btn-outline-dark view-tribute">
               View Tribute
             </Link>
             { editLink }

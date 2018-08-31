@@ -1,0 +1,24 @@
+.profile{
+    margin-top: -25px !important;
+    margin-bottom:-25px;
+    background-image:url('../../img/hand-heart.jpg') ;
+    background-size: cover; 
+    padding: 50px;
+
+}
+
+.profile-container{
+    background: rgba(255, 255, 255, 0.75);
+    padding: 75px;
+    padding-top: 50px;
+    border-radius: 5px;
+}   
+
+
+#profile-pic{
+    padding: 10px;
+}
+
+.profile-header{
+    border: 1px solid #bdbdbd  ;
+}

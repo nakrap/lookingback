@@ -1,0 +1,60 @@
+.footer-wrapper{
+    background: #0d141b;
+    height: 220px;
+    text-align: center;
+    padding: 35px;
+    margin-top: 25px;
+}
+
+
+.white-footer.text{
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.description{
+    color: black;   
+}
+
+.left-column, .mid-column, .right-column{
+    color: white;
+}
+
+#logo{
+    height: 50px;
+    width: 50px;
+    display: block;
+}
+
+#contributor-text{
+    margin-top:10px;
+    font-size: 14px;
+}
+
+#lb-text{
+    margin-top:10px;
+    font-size: 14px;
+
+}
+
+#code-text{
+    margin-top:10px;
+    font-size: 14px;
+
+}
+
+.footer-link { 
+    color: inherit; 
+} 
+
+.footer-link:hover {
+    font-size: 16px;
+    color: white; 
+    text-decoration: underline;
+}
+
+.footer-lower{
+    padding-top: 20px;
+    text-align: center;
+    background: inherit;
+}

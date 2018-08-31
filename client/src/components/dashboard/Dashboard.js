@@ -10,7 +10,7 @@ import ProfileItem from '../profiles/ProfileItem';
 import profileReducer from '../../reducers/profileReducer';
 import CreatedTributeItem from './CreatedTributeItem';
 import dashboardReducer from '../../reducers/dashboardReducer';
-
+import './Dashboard.css'
 
 class Dashboard extends Component {
   componentDidMount() {
@@ -36,8 +36,8 @@ class Dashboard extends Component {
       if(Object.keys(createdTributes).length > 0) {
         dashboardContent = (
           <div>
-            <p className="lead text-muted">Welcome {user.name}</p>
-            <h6>Your tribute pages:</h6>
+            <p className="lead text-muted">Welcome {user.name}!</p>
+            <h6>Your Tribute(s):</h6>
           
             { createdTributes.map(tribute => (
               <ProfileItem key={profileReducer._id} profile={tribute} />
@@ -48,7 +48,7 @@ class Dashboard extends Component {
             {/* TODO: exp and edu */}
             <div>
             <Link to="/create-profile" className="btn btn-lg btn-info">
-              Create Tribute
+              Create New Tribute
             </Link>
             </div>
             <div style={{ marginBottom: '60px' }} />
@@ -70,11 +70,11 @@ class Dashboard extends Component {
     }
 
     return (
-      <div className="dashboard">
-        <div className="container">
+      <div className="container-fluid dashboard">
+        <div className="container dashboard-container">
           <div className="row">
             <div className="col-md-12">
-              <h1 className="display-4">Dashboard</h1>
+              <h1 className="display-4">My Dashboard</h1>
               {dashboardContent}
               </div>
             </div>

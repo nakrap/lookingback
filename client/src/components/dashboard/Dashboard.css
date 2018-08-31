@@ -1,0 +1,18 @@
+.dashboard{
+    width: 100%;
+    height: 100%;
+    margin-top: -25px !important;
+    margin-bottom:-25px;
+    background-image:url('../../img/photo-hand.jpg') ;
+    /* background: blue; */
+    background-size: cover; 
+    padding: 50px;
+
+}
+
+.dashboard-container{
+    background: rgba(255, 255, 255, 0.75);
+    padding: 75px;
+    padding-top: 50px;
+    border-radius: 5px;
+}   

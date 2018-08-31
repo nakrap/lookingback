@@ -137,8 +137,8 @@ class CreateProfile extends Component {
     }
 
     return (
-      <div className="create-profile">
-        <div className="container">
+      <div className="create-profile cp-wrapper">
+        <div className="container cp-container">
           <div className="row">
             <div className="col-md-8 m-auto">
               <h1 className="display-4 text-center">Edit Profile</h1>

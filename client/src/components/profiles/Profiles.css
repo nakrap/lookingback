@@ -1,0 +1,12 @@
+.view-tribute{
+    margin-right: 10px;
+}
+
+.profiles{
+    margin-top: -25px !important;
+    margin-bottom:-25px;
+    background-image:url('../../img/paper.jpg') ;
+    background-size: cover; 
+    padding: 50px;
+
+}
