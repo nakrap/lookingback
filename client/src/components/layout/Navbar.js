@@ -6,6 +6,8 @@ import { logoutUser } from '../../actions/authActions';
 import { clearCurrentProfile } from '../../actions/profileActions';
 import { clearCreatedTributes } from '../../actions/dashboardActions';
 import "./Navbar.css";
+import logo from "../../img/lookBackLogo600x600.png"
+
 class Navbar extends Component {
   constructor(props) {
     super(props);
@@ -82,7 +84,8 @@ class Navbar extends Component {
     <nav className="navbar navbar-expand-sm fixed-top mb-4" style={{ height:this.state.height, transition:"all 0.6s", webkitTransition:"all 0.6s", background:this.state.background}}>
       <div className="container">
         <Link className="navbar-brand" to="/" style={{color:this.state.color}}>
-          Looking-Back
+          <img id="logo1" src={logo} style={{height: "50px", width:"50px"}} />
+
         </Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav">
           <span className="navbar-toggler-icon"></span>
