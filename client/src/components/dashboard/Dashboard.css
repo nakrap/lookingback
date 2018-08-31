@@ -3,7 +3,7 @@
     height: 100%;
     margin-top: -25px !important;
     margin-bottom:-25px;
-    background-image:url('../../img/photo-hand.jpg') ;
+    background-image:url('../../img/mustacheman.jpg') ;
     /* background: blue; */
     background-size: cover; 
     padding: 50px;
@@ -12,8 +12,10 @@
 
 .dashboard-container{
     margin-top: 55px;
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(161, 214, 226, 0.95);
     padding: 75px;
     padding-top: 50px;
     border-radius: 5px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }   
