@@ -48,11 +48,11 @@ class Dashboard extends Component {
             {/* TODO: exp and edu */}
             <div>
             <Link to="/create-profile" className="btn btn-lg btn-info">
-              Create New Tribute
+            Create New Tribute  <i class="fas fa-user-plus"></i> 
             </Link>
             </div>
             <div style={{ marginBottom: '60px' }} />
-            <button onClick={this.onDeleteClick.bind(this)} className="btn btn-danger">Delete my account</button>
+            <button onClick={this.onDeleteClick.bind(this)} className="delete-btn btn btn-danger">Delete my account  <i class="fas fa-trash-alt"></i>  </button>
           </div>
         );
       } else {
@@ -62,7 +62,7 @@ class Dashboard extends Component {
             <p className="lead text-mute">Welcome { user.name }</p>
             <p>Click the button below to start creating a tribute page.</p>
             <Link to="/create-profile" className="btn btn-lg btn-info">
-              Create Tribute
+            <i class="fas fa-user-plus"></i>  Create Tribute
             </Link>
           </div>
         )
@@ -71,7 +71,7 @@ class Dashboard extends Component {
 
     return (
       <div className="container-fluid dashboard">
-        <div className="container dashboard-container">
+        <div className="container content-container">
           <div className="row">
             <div className="col-md-12">
               <h1 className="display-4">My Dashboard</h1>

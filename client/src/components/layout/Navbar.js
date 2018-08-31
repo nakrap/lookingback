@@ -14,7 +14,7 @@ class Navbar extends Component {
 
     this.state = {
       // isTop: true
-      height:"50px",
+      height:"65px",
       background: "transparent",
       color: "white", 
     };
@@ -24,7 +24,7 @@ class Navbar extends Component {
     if (window.scrollY > 100) {
       this.setState({background: '#F1F1F2', color: "black", height: "75px"})
     } else {
-      this.setState({background: 'transparent', color: "white", height: "50px"})
+      this.setState({background: 'transparent', color: "white", height: "65px"})
     }
   }
   componentDidMount() {

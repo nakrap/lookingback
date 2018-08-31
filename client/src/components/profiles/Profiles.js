@@ -30,7 +30,7 @@ class Profiles extends Component {
 
     return (
       <div className="profiles">
-        <div className="container profiles-container">
+        <div className="container content-container">
           <div className="row">
             <div className="col-md-12">
               <h1 className="display-4 text-center">Tribute Pages</h1>

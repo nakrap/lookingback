@@ -5,22 +5,15 @@
     background-size: cover; 
     background-attachment: fixed;
     background-repeat: no-repeat;
-
     padding: 50px;
 
 }
 
-.profile-container{
-    margin-top: 75px;
-    background: rgba(161, 214, 226, 0.95);
-    padding: 75px;
-    padding-top: 50px;
-    border-radius: 5px;
-}   
-
+#tribute-name{
+    text-shadow: 2px 2px 5px #A1D6E2;
+}
 
 #profile-pic{
-    /* padding: 10px; */
     background-color: black;
     border: 6px solid whitesmoke;
     margin-top: 30px;
@@ -28,9 +21,13 @@
 
 .profile-header{
     border: 1px solid #bdbdbd  ;
-    background-image:url('../../img/whiteflowersTINTED.png');
+    background-image:url('../../img/whiteflowersTINTEDGray.png');
     background-color: #1995AD;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: contain; 
+    background-size: cover; 
+}
+
+.lead{
+    text-align: center;
 }

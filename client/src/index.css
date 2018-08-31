@@ -2,4 +2,35 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  position: relative;
+  min-height: 100%;
+}
+
+
+.content-container{
+  margin-top: 105px !important;
+  background: rgba(161, 214, 226, 0.95);
+  padding: 75px;
+  padding-top: 50px;
+  border-radius: 5px;
+  margin-bottom: 150px !important;
+  /* border: 1px solid black;   */
+}   
+
+.content-container.white{
+  background: rgba(241, 241, 242, 0.85);
+
+}
+
+
+/* Needed for footer to stay on bottom */
+html {
+  height: 100%;
+}
+
+/* Needed for footer to stay on bottom */
+
+#space{
+  height: 75px;
+  margin: 0px;
 }

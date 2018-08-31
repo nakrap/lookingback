@@ -8,7 +8,7 @@ export default () => {
         <div className="container">
           <div className="row footer-row">
             <div className="col left-column">
-                  <h4>LookingBack</h4>
+                  <h4>lookingBack</h4>
                   <p  id='lb-text'>A way to memorialize your loved ones</p>
                   <p  id='lb-text'>Created with the sole purpose of preserving forever lasting memories</p>
               </div>
@@ -30,6 +30,12 @@ export default () => {
                 <h4>Check Out the Code</h4>
                   <p id="code-text">
                     <a target="_blank" rel='noreferrer noopener' className='footer-link' href="https://github.com/nakrap/lookingback">GitHub</a>
+                   
+                   <br></br> 
+                   <br></br>
+                   <br></br>
+                   Copyright &copy; {new Date().getFullYear()} lookingBack
+
                   </p>
               
               </div>
@@ -39,9 +45,7 @@ export default () => {
 
         {/* <div className=" footer-lower">
           <h5 className="white-footer text">All Rights Reserved</h5>
-            <p className="description">
-            Copyright &copy; {new Date().getFullYear()} LookingBack
-            </p>
+    
         </div> */}
 
     </footer>

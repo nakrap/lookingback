@@ -10,14 +10,6 @@
 
 }
 
-.cp-container{
-    margin-top: 55px;
-    background: rgba(255, 255, 255, 0.75);
-    padding: 75px;
-    padding-top: 50px;
-    border-radius: 5px;
-}   
-
 .upload{
-    margin-top: 15px;
+    margin-bottom: 15px;
 }
