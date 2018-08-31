@@ -63,7 +63,7 @@ class Register extends Component {
             <p className="lead text-center">You will be able to create and contribute to tribute pages.</p>
             <form noValidate onSubmit={this.onSubmit}>
               <TextFieldGroup
-                placeholder="name"
+                placeholder="Name"
                 name="name"
                 value={this.state.name}
                 onChange={this.onChange}

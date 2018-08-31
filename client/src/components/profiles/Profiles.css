@@ -23,9 +23,8 @@
 }
 
 #profile-bio{
-    /* float: right; */
     background-color: rgb(188,186,190, 0.35);
     padding: 25px;
     border-radius: 10px;
-    
+    margin-top: 20px;
 }

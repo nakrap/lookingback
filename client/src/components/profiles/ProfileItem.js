@@ -26,7 +26,7 @@ class ProfileItem extends Component {
             <img src={isEmpty(profile.img) ?  "//www.gravatar.com/avatar/e28f6f64608c970c663197d7fe1f5a59?s=200&r=pg&d=mm" : profile.avatar}/>
             {/* <img src={profile.avatar} className="rounded-circle"/> */}
           </div>
-          <div className="col-lg-6 col-md-4 col-8">
+          <div className="col-lg-5 col-md-4 col-8">
             <h3>{profile.name}</h3>
             <p>
               {isEmpty(profile.DOB) ? null : (<span>{profile.DOB}</span>)}
@@ -36,7 +36,7 @@ class ProfileItem extends Component {
             </Link>
             { editLink }
           </div>
-            <div className="col-3">
+            <div className="col-4">
 
               <div id="profile-bio">
                 <span >{profile.bio}</span>
