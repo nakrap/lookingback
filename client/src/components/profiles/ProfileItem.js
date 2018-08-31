@@ -15,7 +15,7 @@ class ProfileItem extends Component {
     if (profile.createdBy._id === user.id) {
       editLink = (
         <span>
-        <Link to={`/edit-profile/${profile._id}`} className="btn btn-outline-dark">Edit Tribute</Link><p> </p></span>
+        <Link to={`/edit-profile/${profile._id}`} className="btn btn-outline-warning">Edit Tribute <i class="fas fa-edit"></i> </Link><p> </p></span>
       )
     }
 
@@ -36,6 +36,12 @@ class ProfileItem extends Component {
             </Link>
             { editLink }
           </div>
+            <div className="col-3">
+
+              <div id="profile-bio">
+                <span >{profile.bio}</span>
+              </div>
+            </div>
         </div>
       </div>
 

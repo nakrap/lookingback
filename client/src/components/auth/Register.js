@@ -56,7 +56,7 @@ class Register extends Component {
 
     return (
     <div className="register">
-      <div className="container">
+      <div className="container content-container white">
         <div className="row">
           <div className="col-md-8 m-auto">
             <h1 className="display-4 text-center">Sign Up</h1>

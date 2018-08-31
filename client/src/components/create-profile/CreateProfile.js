@@ -117,14 +117,21 @@ class CreateProfile extends Component {
 
     return (
       <div className="create-profile cp-wrapper">
-        <div className="container cp-container">
+        <div className="container content-container">
           <div className="row">
             <div className="col-md-8 m-auto">
               <h1 className="display-4 text-center">Create a Tribute page</h1>
               <p className="lead text-center">
                 Let's get some information about your loved one
               </p>
-              <small className="d-block pb-3">* = required fields</small>
+
+              <div className="upload">
+                <button 
+                  onClick={this.uploadWidget.bind(this)}
+                  className="btn btn-outline-light upload-button">
+                  <i class="fas fa-upload"></i>  Upload  an Image
+                </button>
+              </div>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
                   placeholder="* name"
@@ -164,7 +171,9 @@ class CreateProfile extends Component {
                     Add Social Network Links
                   </button>
                   <span className="text-muted"> (Optional)</span>
-                </div>
+                </div>              
+                <small className="d-block pb-3">* = required fields</small>
+
                 {socialInputs}
                 <input
                   type="submit"
@@ -172,14 +181,7 @@ class CreateProfile extends Component {
                   className="btn btn-info btn-block mt-4"
                 />
               </form>
-              <div className="upload">
-                <button
-                  onClick={this.uploadWidget.bind(this)}
-                  className="btn btn-light upload-button">
-                  Add Image
-                </button>
               </div>
-            </div>
           </div>
         </div>
       </div>
