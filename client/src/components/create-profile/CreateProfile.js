@@ -11,6 +11,8 @@ import InputGroup from "../common/InputGroup";
 // import { cloudinary } from "cloudinary";
 // import SelectListGroup from '../common/SelectListGroup';
 import { createProfile } from "../../actions/profileActions";
+import "./CreateProfile.css"
+
 
 class CreateProfile extends Component {
   constructor(props) {
@@ -114,11 +116,11 @@ class CreateProfile extends Component {
     }
 
     return (
-      <div className="create-profile">
-        <div className="container">
+      <div className="create-profile cp-wrapper">
+        <div className="container cp-container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Create a tribute page</h1>
+              <h1 className="display-4 text-center">Create a Tribute page</h1>
               <p className="lead text-center">
                 Let's get some information about your loved one
               </p>
@@ -130,7 +132,7 @@ class CreateProfile extends Component {
                   value={this.state.name}
                   onChange={this.onChange}
                   error={errors.name}
-                  info="first and last name of your loved one"
+                  info="First and Last name of your loved one"
                 />
                 <TextFieldGroup
                   placeholder="date of birth"
@@ -139,15 +141,15 @@ class CreateProfile extends Component {
                   value={this.state.DOB}
                   onChange={this.onChange}
                   error={errors.DOB}
-                  info="date of birth"
+                  info="Date of Birth"
                 />
                 <TextAreaFieldGroup
-                  placeholder="bio"
+                  placeholder="Bio"
                   name="bio"
                   value={this.state.bio}
                   onChange={this.onChange}
                   error={errors.bio}
-                  info="write some words about your loved one"
+                  info="Write some words about your loved one"
                 />
                 <div className="mb-3">
                   <button
@@ -161,7 +163,7 @@ class CreateProfile extends Component {
                   >
                     Add Social Network Links
                   </button>
-                  <span className="text-muted">Optional</span>
+                  <span className="text-muted"> (Optional)</span>
                 </div>
                 {socialInputs}
                 <input
@@ -173,8 +175,7 @@ class CreateProfile extends Component {
               <div className="upload">
                 <button
                   onClick={this.uploadWidget.bind(this)}
-                  className="upload-button"
-                >
+                  className="btn btn-light upload-button">
                   Add Image
                 </button>
               </div>

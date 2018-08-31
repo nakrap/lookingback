@@ -22,10 +22,10 @@ class CreatedTributeItem extends Component {
               {isEmpty(createdTributes.DOB) ? null : (<span>{createdTributes.DOB}</span>)}
             </p>
             <Link to={`/profile/${createdTributes._id}`} className="btn btn-info">
-              View createdTributes
+              View Created Tributes
             </Link>
             <Link to={`/edit-profile/${createdTributes._id}`} className="btn btn-warning">
-              Edit createdTributes
+              Edit Created Tributes
             </Link>            
           </div>
         </div>

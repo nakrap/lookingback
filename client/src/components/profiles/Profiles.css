@@ -1,0 +1,22 @@
+.view-tribute{
+    margin-right: 10px;
+}
+
+.profiles{
+    margin-top: -25px !important;
+    margin-bottom:-25px;
+    background-image: url("../../img/photo-mess.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+    padding: 50px;
+
+}
+
+.profiles-container{
+    margin-top: 55px;
+    background: rgba(161, 214, 226, 0.95);
+    padding: 75px;
+    padding-top: 50px;
+    border-radius: 5px;
+}

@@ -1,0 +1,21 @@
+.dashboard{
+    width: 100%;
+    height: 100%;
+    margin-top: -25px !important;
+    margin-bottom:-25px;
+    background-image:url('../../img/mustacheman.jpg') ;
+    /* background: blue; */
+    background-size: cover; 
+    padding: 50px;
+
+}
+
+.dashboard-container{
+    margin-top: 55px;
+    background: rgba(161, 214, 226, 0.95);
+    padding: 75px;
+    padding-top: 50px;
+    border-radius: 5px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}   
