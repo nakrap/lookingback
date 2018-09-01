@@ -10,7 +10,7 @@
 }
 
 #tribute-name{
-    text-shadow: 2px 2px 5px #A1D6E2;
+    text-shadow: 1px 1px 5px black;
 }
 
 #profile-pic{
@@ -28,6 +28,6 @@
     background-size: cover; 
 }
 
-.lead{
+#bio-description{
     text-align: center;
 }

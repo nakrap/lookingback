@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import classnames from 'classnames';
 import { Link } from 'react-router-dom';
 import { deletePost, addLike, removeLike } from '../../actions/postActions';
+import "./Posts.css"
+
 
 class PostItem extends Component {
   onDeleteClick(id) {
@@ -31,7 +33,7 @@ class PostItem extends Component {
     const { post, auth, showActions } = this.props;
 
     return (
-      <div className="card card-body mb-3">
+      <div id="post-items" className="card card-body mb-3 ">
         <div className="row">
           <div className="col-md-2">
               <img 
