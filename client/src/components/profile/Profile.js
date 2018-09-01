@@ -8,7 +8,7 @@ import ProfileAbout from './ProfileAbout';
 import Spinner from '../common/Spinner';
 import Posts from '../posts/Posts';
 import { getProfileById } from '../../actions/profileActions';
-import { getPosts } from '../../actions/postActions';
+// import { getPosts } from '../../actions/postActions';
 import './Profile.css'
 
 class Profile extends Component {
