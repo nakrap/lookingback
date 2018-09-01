@@ -13,11 +13,11 @@ class PostItem extends Component {
   }
 
   onLikeClick(id) {
-    this.props.addLike(id);
+    this.props.addLike(id, this.props.post.profile);
   }
   
   onUnlikeClick(id) {
-    this.props.removeLike(id);
+    this.props.removeLike(id, this.props.post.profile);
   }
 
   findUserLike(likes) {
