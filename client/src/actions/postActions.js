@@ -86,10 +86,10 @@ export const deletePost = id => dispatch => {
 };
 
 // add like
-export const addLike = id => dispatch => {
+export const addLike = (id, profileId) => dispatch => {
   axios
     .post(`/api/posts/like/${id}`)
-    .then(res => dispatch(getPosts()))
+    .then(res => dispatch(getPosts(profileId)))
     .catch(err =>
       dispatch({
         type: GET_ERRORS,
@@ -99,10 +99,10 @@ export const addLike = id => dispatch => {
 };
 
 // remove like
-export const removeLike = id => dispatch => {
+export const removeLike = (id, profileId) => dispatch => {
   axios
     .post(`/api/posts/unlike/${id}`)
-    .then(res => dispatch(getPosts()))
+    .then(res => dispatch(getPosts(profileId)))
     .catch(err =>
       dispatch({
         type: GET_ERRORS,
