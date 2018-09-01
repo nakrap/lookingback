@@ -18,7 +18,7 @@ export default () => {
                 <p id="contributor-text">
                   <a target="_blank" rel='noreferrer noopener' className='footer-link' href="https://github.com/scottgall">Scott Gall</a>
                   <br></br>
-                  <a target="_blank" rel='noreferrer noopener' className='footer-link' href="https://github.com/nakrap">Nick Akrup</a>
+                  <a target="_blank" rel='noreferrer noopener' className='footer-link' href="https://github.com/nakrap">Nick Akrap</a>
                   <br></br>
                   <a target="_blank" rel='noreferrer noopener' className='footer-link' href="https://github.com/JeffVongkoth">Jeff Vongkoth</a>
                   <br></br>
