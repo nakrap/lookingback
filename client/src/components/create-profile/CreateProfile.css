@@ -11,5 +11,11 @@
 }
 
 .upload{
+    margin-top: 50px;
     margin-bottom: 15px;
+}
+
+.pb-3{
+    float: right;
+    margin-bottom: 20px;
 }

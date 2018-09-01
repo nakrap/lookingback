@@ -141,36 +141,35 @@ class CreateProfile extends Component {
         <div className="container content-container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Edit Profile</h1>
+              <h1 className="display-4 text-center">Edit Tribute Page</h1>
               <p className="lead text-center">
                 Add some information about your loved one.
               </p>
-              <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup 
-                  placeholder="* name"
+                  placeholder="* Name"
                   name="name"
                   value={this.state.name}
                   onChange={this.onChange}
                   error={errors.name}
-                  info="first and last name"
+                  info="* First and Last name"
                 />
                 <TextFieldGroup 
-                  placeholder="date of birth"
+                  placeholder="* Date of Birth"
                   name="DOB"
                   type="date"
                   value={this.state.DOB}
                   onChange={this.onChange}
                   error={errors.DOB}
-                  info="date of birth"
+                  info="* Date of Birth"
                 />
                 <TextAreaFieldGroup 
-                  placeholder="bio"
+                  placeholder="Bio"
                   name="bio"
                   value={this.state.bio}
                   onChange={this.onChange}
                   error={errors.bio}
-                  info="write some words about your loved one"
+                  info="Write some words about your loved one"
                 />
                 <div className="mb-3">
                   <button 
@@ -182,15 +181,18 @@ class CreateProfile extends Component {
                   }} className="btn btn-light">
                   Add Social Network Links
                   </button>
-                  <span className="text-muted">Optional</span>
+                  <span className="text-muted"> (Optional)</span>
                 </div>
                 {socialInputs}
+                <small className="d-block pb-3">* = required fields</small>
+
                 <input 
                   type="submit" 
                   value="Submit" 
                   className="btn btn-info btn-block mt-4" 
                 />
               </form>
+
             </div>
           </div>
         </div>

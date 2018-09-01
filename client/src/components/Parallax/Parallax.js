@@ -4,6 +4,7 @@ import { Parallax } from 'react-parallax';
 // import Search from "../Search/Search";
 import ThreeThings from "../ThreeThings/ThreeThings";
 import Steps from "../Steps/Steps";
+import "./Parallax.css";
 // import QuoteSnippet from "../QuoteSnippet/QuoteSnippet";
 // import logo from "./lookBackLogoNEW.png";
 
@@ -25,11 +26,9 @@ const ParallaxComponent = () => (
 
     <Parallax bgImage={img7}
       strength={300}>
-      <div style={{height: 550}}></div>
-      <div className="search-div">
-      {/* <Search/> */}
-      
-      </div>
+      <h1 id='app-title'>lookingBack</h1>
+      <div style={{height: 215}}></div>
+
       <div className="steps-div" style={{padding:120}}>
           <Steps/>
           </div>

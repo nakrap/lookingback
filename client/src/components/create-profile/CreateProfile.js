@@ -139,7 +139,7 @@ class CreateProfile extends Component {
                   value={this.state.name}
                   onChange={this.onChange}
                   error={errors.name}
-                  info="First and Last name of your loved one"
+                  info="* First and Last name of your loved one"
                 />
                 <TextFieldGroup
                   placeholder="date of birth"
@@ -148,7 +148,7 @@ class CreateProfile extends Component {
                   value={this.state.DOB}
                   onChange={this.onChange}
                   error={errors.DOB}
-                  info="Date of Birth"
+                  info="* Date of Birth"
                 />
                 <TextAreaFieldGroup
                   placeholder="Bio"

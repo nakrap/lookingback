@@ -36,9 +36,17 @@ class Dashboard extends Component {
       if(Object.keys(createdTributes).length > 0) {
         dashboardContent = (
           <div>
+            <div>
+           
+
             <p className="lead text-muted">Welcome {user.name}!</p>
-            <h6>Your Tribute(s):</h6>
-          
+            <Link id='create-tribute-btn' to="/create-profile" className="btn btn-lg btn-info">
+            Create New Tribute  <i class="fas fa-user-plus"></i> 
+            </Link>
+            </div>
+             <br></br><br></br>  
+            <h6>Your Tribute(s):</h6> 
+
             { createdTributes.map(tribute => (
               <ProfileItem key={profileReducer._id} profile={tribute} />
               // <h1>{tribute.name}</h1>
@@ -46,11 +54,7 @@ class Dashboard extends Component {
 
             {/* <ProfileActions /> */}
             {/* TODO: exp and edu */}
-            <div>
-            <Link to="/create-profile" className="btn btn-lg btn-info">
-            Create New Tribute  <i class="fas fa-user-plus"></i> 
-            </Link>
-            </div>
+
             <div style={{ marginBottom: '60px' }} />
             <button onClick={this.onDeleteClick.bind(this)} className="delete-btn btn btn-danger">Delete my account  <i class="fas fa-trash-alt"></i>  </button>
           </div>
@@ -74,7 +78,7 @@ class Dashboard extends Component {
         <div className="container content-container">
           <div className="row">
             <div className="col-md-12">
-              <h1 className="display-4">My Dashboard</h1>
+              <h1 id='my-dashboard' className="display-4 ">My Dashboard</h1>
               {dashboardContent}
               </div>
             </div>

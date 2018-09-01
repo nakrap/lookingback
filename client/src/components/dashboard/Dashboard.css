@@ -4,7 +4,8 @@
     margin-top: -25px !important;
     margin-bottom:-25px;
     background-image:url('../../img/mustacheman.jpg') ;
-    /* background: blue; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover; 
     padding: 50px;
 
@@ -13,4 +14,12 @@
 .delete-btn{
     float: right;
 
+}
+
+#my-dashboard{
+    text-align: center;
+}
+
+#create-tribute-btn{
+    float: right;
 }
