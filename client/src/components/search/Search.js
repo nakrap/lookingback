@@ -58,19 +58,6 @@ class Search extends Component {
   render() {
     const { errors } = this.state;
     console.log(this.state.search)
-    const { searchedTributes } = this.props.searchedTributes;
-
-    let displayResults;
-
-    if(!this.props.searchedTributes) {
-      displayResults = (
-        <div>no results</div>
-      )
-    } else {
-      displayResults = (
-        <div> results </div>
-      )
-    }
 
     let searchResults;
 
