@@ -3,9 +3,9 @@ import axios from 'axios';
 import { GET_SEARCHED_TRIBUTES, SEARCHED_TRIBUTES_LOADING, SEARCHED_TRIBUTES_NOT_FOUND, CLEAR_SEARCHED_TRIBUTES } from './types';
 
 // get created tributes
-export const getSearchedTributes = () => dispatch => {
+export const getSearchedTributes = (name) => dispatch => {
   dispatch(setSearchedTributesLoading());
-  axios.get('/api/profile')
+  axios.get(`/api/profile/search/${name}`)
     .then(res =>
       dispatch({
         type: GET_SEARCHED_TRIBUTES,

@@ -23,7 +23,7 @@ class ProfileItem extends Component {
       <div className="card card-body bg-light mb-3">
         <div className="row">
           <div className="col-2">
-            <img src={isEmpty(profile.img) ?  "//www.gravatar.com/avatar/e28f6f64608c970c663197d7fe1f5a59?s=200&r=pg&d=mm" : profile.avatar}/>
+            <img src={isEmpty(profile.img) ?  "//www.gravatar.com/avatar/e28f6f64608c970c663197d7fe1f5a59?s=200&r=pg&d=mm" : profile.img}/>
             {/* <img src={profile.avatar} className="rounded-circle"/> */}
           </div>
           <div className="col-lg-5 col-md-4 col-8">
