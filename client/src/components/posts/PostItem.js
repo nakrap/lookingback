@@ -31,7 +31,11 @@ class PostItem extends Component {
 
   render() {
     const { post, auth, showActions } = this.props;
+    let ShowActions = true;
 
+    if (!auth.user.id) {
+      ShowActions = false;
+    }
     return (
       <div id="post-items" className="card card-body mb-3 ">
         <div className="row">
@@ -46,7 +50,7 @@ class PostItem extends Component {
           </div>
           <div className="col-md-10">
             <p className="lead">{post.text}</p>
-            {showActions ? (<span>
+            {ShowActions ? (<span>
               <button 
               onClick={this.onLikeClick.bind(this, post._id)} type="button" 
               className="btn btn-light mr-1"

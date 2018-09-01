@@ -25,7 +25,7 @@ class CommentForm extends Component {
   onSubmit(e) {
     e.preventDefault();
 
-    const { profile } = this.props.profile;
+    // const { profile } = this.props.profile;
     const { user } = this.props.auth;
     const { postId } = this.props;
 

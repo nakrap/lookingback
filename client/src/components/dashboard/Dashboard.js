@@ -48,15 +48,14 @@ class Dashboard extends Component {
             <h6>Your Tribute(s):</h6> 
 
             { createdTributes.map(tribute => (
-              <ProfileItem key={profileReducer._id} profile={tribute} />
+              <ProfileItem key={tribute._id} profile={tribute} />
               // <h1>{tribute.name}</h1>
             ))}
 
             {/* <ProfileActions /> */}
             {/* TODO: exp and edu */}
-
             <div style={{ marginBottom: '60px' }} />
-            <button onClick={this.onDeleteClick.bind(this)} className="delete-btn btn btn-danger">Delete my account  <i class="fas fa-trash-alt"></i>  </button>
+            <button onClick={this.onDeleteClick.bind(this)} className="delete-btn btn btn-danger">Delete my account  <i className="fas fa-trash-alt"></i>  </button>
           </div>
         );
       } else {
@@ -66,7 +65,7 @@ class Dashboard extends Component {
             <p className="lead text-mute">Welcome { user.name }</p>
             <p>Click the button below to start creating a tribute page.</p>
             <Link to="/create-profile" className="btn btn-lg btn-info">
-            <i class="fas fa-user-plus"></i>  Create Tribute
+            <i className="fas fa-user-plus"></i>  Create Tribute
             </Link>
           </div>
         )

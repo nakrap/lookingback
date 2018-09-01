@@ -131,6 +131,7 @@ class CreateProfile extends Component {
                   className="btn btn-outline-light upload-button">
                   <i class="fas fa-upload"></i>  Upload  an Image
                 </button>
+                recommended image - 600px X 600px
               </div>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup

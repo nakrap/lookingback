@@ -25,11 +25,9 @@ class Search extends Component {
 
   }
 
-  // componentDidMount() {
-  //   if(this.props.auth.isAuthenticated) {
-  //     this.props.history.push('/dashboard');
-  //   }
-  // }
+  componentDidMount() {
+    this.props.searchedTributes;
+  }
 
   // componentWillReceiveProps(nextProps) {
   //   if(nextProps.auth.isAuthenticated) {
@@ -49,9 +47,8 @@ class Search extends Component {
     this.state.haveSearched = true;
     console.log(this.state.haveSearched);
     const search = {
-      name: this.state.name
+      name: this.state.search
     }
-
   }
 
   onChange(e) {
@@ -60,6 +57,20 @@ class Search extends Component {
 
   render() {
     const { errors } = this.state;
+    console.log(this.state.search)
+    const { searchedTributes } = this.props.searchedTributes;
+
+    let displayResults;
+
+    if(!this.props.searchedTributes) {
+      displayResults = (
+        <div>no results</div>
+      )
+    } else {
+      displayResults = (
+        <div> results </div>
+      )
+    }
 
     let searchResults;
 
@@ -110,7 +121,7 @@ class Search extends Component {
 
 Search.propTypes = {
   getSearchedTributes: PropTypes.func.isRequired,
-  searchResults: PropTypes.object.isRequired
+  searchedTributes: PropTypes.object.isRequired
   // loginUser: PropTypes.func.isRequired,
   // auth: PropTypes.object.isRequired,
   // errors: PropTypes.object.isRequired

@@ -8,6 +8,7 @@ import InputGroup from '../common/InputGroup';
 // import SelectListGroup from '../common/SelectListGroup';
 import { createProfile, getCurrentProfile, getProfileById } from '../../actions/profileActions';
 import isEmpty from '../../validation/is-empty';
+import { Link } from 'react-router-dom';
 
 class CreateProfile extends Component {
   constructor(props) {
@@ -37,6 +38,16 @@ class CreateProfile extends Component {
       this.props.getProfileById(this.props.match.params.id);
     }
   }
+  uploadWidget = () => {
+    window.cloudinary.openUploadWidget(
+      { cloud_name: "nakrap", upload_preset: "x2rmt9j3", tags: ["xmas"] },
+      (error, result) => {
+        this.setState({ img: result[0].url });
+        // console.log(result[0].url);
+        console.log(this.state.img);
+      }
+    );
+  };
 
   componentWillReceiveProps(nextProps) {
     if(nextProps.errors) {
@@ -141,10 +152,22 @@ class CreateProfile extends Component {
         <div className="container content-container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Edit Tribute Page</h1>
+              <Link className="btn btn-outline-warning" to="/Dashboard" style={{color:this.state.color}}>
+              Cancel
+              </Link>
+              <h1 className="display-4 text-center">Edit Profile</h1>
               <p className="lead text-center">
                 Add some information about your loved one.
               </p>
+              <div className="upload">
+                <button 
+                  onClick={this.uploadWidget.bind(this)}
+                  className="btn btn-outline-light upload-button">
+                  <i className="fas fa-upload"></i>  Upload  an Image
+                </button>
+                  recommended image - 600px X 600px
+              </div>
+              <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup 
                   placeholder="* Name"
