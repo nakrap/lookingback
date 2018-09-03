@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import TextFieldGroup from "../common/TextFieldGroup";
 import TextAreaFieldGroup from "../common/TextAreaFieldGroup";
@@ -131,11 +131,11 @@ class CreateProfile extends Component {
                   className="btn btn-outline-light upload-button">
                   <i class="fas fa-upload"></i>  Upload  an Image
                 </button>
-                recommended image - 600px X 600px
+                <span id='img-rec'> (Recommended image - 600px X 600px)</span>
               </div>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
-                  placeholder="* name"
+                  placeholder="Name"
                   name="name"
                   value={this.state.name}
                   onChange={this.onChange}
@@ -182,6 +182,9 @@ class CreateProfile extends Component {
                   className="btn btn-info btn-block mt-4"
                 />
               </form>
+              <Link id='cancel-btn' className="btn btn-warning" to="/Dashboard" style={{color:this.state.color}}>
+              Cancel
+              </Link>
               </div>
           </div>
         </div>
