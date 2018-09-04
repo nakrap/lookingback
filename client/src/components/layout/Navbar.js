@@ -59,12 +59,12 @@ class Navbar extends Component {
             Dashboard
           </Link>
         </li>
-        <li className="nav-item" >
+        <li className="nav-item" style={{color:this.state.color}} >
     
-          <a 
-            href="/Dashboard" 
+          <Link 
+            to="/Dashboard" 
             onClick={this.onLogoutClick.bind(this)} 
-            className="nav-link">
+            className="nav-link" style={{color:this.state.color}}>
             <img 
               className="rounded-circle"
               src={user.avatar} 
@@ -73,7 +73,7 @@ class Navbar extends Component {
               title="you must have a Gravatar connected to your email to display an image" 
             />{' '}
             Logout
-          </a>
+          </Link>
 
         </li>
       </ul>
