@@ -11,12 +11,12 @@ class ProfileHeader extends Component {
           <div className="card card-body text-white mb-3 profile-header">
             <div className="row">
               <div className="col-4 col-md-3 m-auto">
-              <img id='profile-pic' className="rounded-circle" src={isEmpty(profile.img) ?  "//www.gravatar.com/avatar/e28f6f64608c970c663197d7fe1f5a59?s=200&r=pg&d=mm" : profile.img}/>
+              <img id='profile-pic' alt="user" className="rounded-circle" src={isEmpty(profile.img) ?  "//www.gravatar.com/avatar/e28f6f64608c970c663197d7fe1f5a59?s=200&r=pg&d=mm" : profile.img} />
                 {/* <img className="rounded-circle" src={profile.user.avatar} alt="" /> */}
               </div>
             </div>
             <div className="text-center">
-              <h1 className="display-4 text-center">{profile.name}</h1>
+              <h1 id='tribute-name' className="display-4 text-center">{profile.name}</h1>
               <p>
               {isEmpty(profile.social && profile.social.twitter) ? null : (
                 <a 

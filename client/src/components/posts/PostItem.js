@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import classnames from 'classnames';
 import { Link } from 'react-router-dom';
 import { deletePost, addLike, removeLike } from '../../actions/postActions';
+import "./Posts.css"
+
 
 class PostItem extends Component {
   onDeleteClick(id) {
@@ -11,11 +13,11 @@ class PostItem extends Component {
   }
 
   onLikeClick(id) {
-    this.props.addLike(id);
+    this.props.addLike(id, this.props.post.profile);
   }
   
   onUnlikeClick(id) {
-    this.props.removeLike(id);
+    this.props.removeLike(id, this.props.post.profile);
   }
 
   findUserLike(likes) {
@@ -29,9 +31,13 @@ class PostItem extends Component {
 
   render() {
     const { post, auth, showActions } = this.props;
+    let ShowActions = true;
 
+    if (!auth.user.id) {
+      ShowActions = false;
+    }
     return (
-      <div className="card card-body mb-3">
+      <div id="post-items" className="card card-body mb-3 ">
         <div className="row">
           <div className="col-md-2">
               <img 
@@ -44,7 +50,7 @@ class PostItem extends Component {
           </div>
           <div className="col-md-10">
             <p className="lead">{post.text}</p>
-            {showActions ? (<span>
+            {ShowActions ? (<span>
               <button 
               onClick={this.onLikeClick.bind(this, post._id)} type="button" 
               className="btn btn-light mr-1"

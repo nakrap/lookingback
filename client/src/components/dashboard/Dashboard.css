@@ -3,17 +3,23 @@
     height: 100%;
     margin-top: -25px !important;
     margin-bottom:-25px;
-    background-image:url('../../img/photo-hand.jpg') ;
-    /* background: blue; */
+    background-image:url('../../img/mustacheman.jpg') ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover; 
     padding: 50px;
 
 }
 
-.dashboard-container{
-    margin-top: 55px;
-    background: rgba(255, 255, 255, 0.75);
-    padding: 75px;
-    padding-top: 50px;
-    border-radius: 5px;
-}   
+.delete-btn{
+    float: right;
+
+}
+
+#my-dashboard{
+    text-align: center;
+}
+
+#create-tribute-btn{
+    float: right;
+}

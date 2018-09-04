@@ -25,7 +25,7 @@ class CommentForm extends Component {
   onSubmit(e) {
     e.preventDefault();
 
-    const { profile } = this.props.profile;
+    // const { profile } = this.props.profile;
     const { user } = this.props.auth;
     const { postId } = this.props;
 
@@ -48,7 +48,7 @@ class CommentForm extends Component {
     const { errors } = this.state;
 
     return (
-    <div className="post-form mb-3">
+    <div className="post-form mb-3 comment-form">
       <div className="card card-info">
         <div className="card-header bg-info text-white">
           Make a comment...

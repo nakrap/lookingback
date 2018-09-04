@@ -4,6 +4,11 @@ import { connect } from 'react-redux';
 import { loginUser } from '../../actions/authActions';
 import { getSearchedTributes } from '../../actions/searchActions'
 import TextFieldGroup from '../common/TextFieldGroup';
+import Spinner from '../common/Spinner';
+import searchReducer from '../../reducers/searchReducer';
+import ProfileItem from '../profiles/ProfileItem';
+import { Link } from 'react-router-dom';
+import profileReducer from '../../reducers/profileReducer';
 
 
 class Search extends Component {
@@ -11,6 +16,7 @@ class Search extends Component {
     super();
     this.state = {
       search: '',
+      haveSearched: false,
       errors: {}
     };
 
@@ -19,11 +25,9 @@ class Search extends Component {
 
   }
 
-  // componentDidMount() {
-  //   if(this.props.auth.isAuthenticated) {
-  //     this.props.history.push('/dashboard');
-  //   }
-  // }
+  componentDidMount() {
+    this.props.searchedTributes;
+  }
 
   // componentWillReceiveProps(nextProps) {
   //   if(nextProps.auth.isAuthenticated) {
@@ -37,12 +41,14 @@ class Search extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-
+    console.log('clicked')
+    console.log(this.state.search)
+    this.props.getSearchedTributes(this.state.search);
+    this.state.haveSearched = true;
+    console.log(this.state.haveSearched);
     const search = {
-      name: this.state.name
+      name: this.state.search
     }
-
-    this.props.loginUser(search);
   }
 
   onChange(e) {
@@ -51,10 +57,31 @@ class Search extends Component {
 
   render() {
     const { errors } = this.state;
+    console.log(this.state.search)
 
+    let searchResults;
+
+    const { searchedTributes } = this.props.searchedTributes;
+
+    console.log(searchedTributes);
+
+    if ((searchedTributes === null || searchedTributes.length < 0) && this.state.haveSearched === true) {
+      searchResults = (
+        <h6>No results found</h6>
+      )
+    } else if (searchedTributes !== null && this.state.haveSearched === true) { 
+      searchResults = (
+        <div>
+        <h6>Results:</h6>
+        { searchedTributes.map(tribute => (
+          <ProfileItem key={profileReducer._id} profile={tribute} />
+      ))}
+      </div>
+      )
+    }
     return (
       <div className="login">
-        <div className="container">
+        <div className="container content-container white">
           <div className="row">
             <div className="col-md-8 m-auto">
               <h1 className="display-4 text-center">Search Tributes</h1>
@@ -70,6 +97,7 @@ class Search extends Component {
                 />
                 <input type="submit" className="btn btn-info btn-block mt-4" />
               </form>
+              { searchResults }
             </div>
           </div>
         </div>
@@ -80,14 +108,14 @@ class Search extends Component {
 
 Search.propTypes = {
   getSearchedTributes: PropTypes.func.isRequired,
-  searchResults: PropTypes.object.isRequired
+  searchedTributes: PropTypes.object.isRequired
   // loginUser: PropTypes.func.isRequired,
   // auth: PropTypes.object.isRequired,
   // errors: PropTypes.object.isRequired
 }
 
 const mapStateToProps = (state) => ({
-  searchResults: state.searchResults
+  searchedTributes: state.searchedTributes,
   // auth: state.auth,
   // errors: state.errors,
 })

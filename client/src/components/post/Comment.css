@@ -1,0 +1,23 @@
+
+.post{
+    margin-top: -25px !important;
+    margin-bottom:-25px;
+    background-image:url('../../img/jobHandWood.jpeg') ;
+    background-size: cover; 
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 50px;
+
+}
+
+
+.comment-form{
+    max-width: 90% !important;
+    margin: 30px 5% 0 5%;
+}
+.comment-card{
+    width: 86%;
+    margin-left: 7%; 
+    margin-right: 7%; 
+}
+

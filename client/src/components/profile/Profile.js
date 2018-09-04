@@ -8,7 +8,7 @@ import ProfileAbout from './ProfileAbout';
 import Spinner from '../common/Spinner';
 import Posts from '../posts/Posts';
 import { getProfileById } from '../../actions/profileActions';
-import { getPosts } from '../../actions/postActions';
+// import { getPosts } from '../../actions/postActions';
 import './Profile.css'
 
 class Profile extends Component {
@@ -51,7 +51,7 @@ class Profile extends Component {
     }
     return (
       <div className="profile container-fluid">
-        <div className="container  profile-container">
+        <div className="container content-container">
           <div className="row">
             <div className="col-md-12">
               {profileContent}

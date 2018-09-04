@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 import Parallax from "../Parallax/Parallax";
 
 class Landing extends Component {   
-  componentDidMount() {
-    if(this.props.auth.isAuthenticated) {
-      this.props.history.push('/dashboard');
-    }
-  }
+  // componentDidMount() {
+  //   if(this.props.auth.isAuthenticated) {
+  //     this.props.history.push('/dashboard');
+  //   }
+  // }
 
   render() {
     return (

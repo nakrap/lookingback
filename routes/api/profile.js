@@ -78,6 +78,25 @@ router.get('/id/:id', (req, res) => {
       .catch(err => res.status(404).json(err));
 });
 
+// @route - GET api/profile/search/
+// @desc - get profile by name
+// @access - public
+router.get('/search/:name', (req, res) => {
+  const errors = {};
+
+  Profile.find({ name: req.params.name })
+    .populate('createdBy', ['name'])
+    .then(profile => {
+      if(!profile) {
+        errors.noprofile = 'profile does not exist';
+        res.status(404).json(errors);
+      }
+
+      res.json(profile);
+    })
+      .catch(err => res.status(404).json(err));
+});
+
 // @route - GET api/profile/user/:user_id
 // @desc - get profiles by user id
 // @access - public
@@ -96,6 +115,27 @@ router.get('/user/:user_id', (req, res) => {
     })
       .catch(err => res.status(404).json({ profile: 'there are no profiles created by this user' }));
 });
+
+// @route - GET api/profile/search/:name
+// @desc - get profiles by name
+// @access - public
+router.get('/search/:name', (req, res) => {
+  console.log("SEARCH");
+  const errors = {};
+
+  Profile.find({ name: req.params.name })
+    .populate('createdBy', ['name'])
+    .then(profile => {
+      if(!profile) {
+        errors.noprofile = `profile doesn't exist`;
+        res.status(404).json(errors);
+      }
+
+      res.json(profile);
+    })
+      .catch(err => res.status(404).json({ profile: 'there are no profiles with this name' }));
+});
+
 
 // @route - POST api/profile
 // @desc - create or edit tribute profile
