@@ -5,12 +5,21 @@
   padding-bottom: 40px;
 }
 
-
+.media-object-img  {
+  border: 2px solid whitesmoke;
+}
+#logo1{
+  border: 2px solid #F1F1F2;
+}
 .info-text{
  font-size:20px; 
 }
 
 .media {
-  margin-top: 25px;
+  margin-top: 30px;
 
+}
+
+.media-body-middle, .media-body {
+  margin-top: 5%;
 }

@@ -60,25 +60,25 @@ const ThreeThings = () => (
 <div className="container">
 <div class="media">
     <div class="media-left">
-      <img src="http://placekitten.com/g/400/200" class="media-object"></img>
+      <img src="https://images.unsplash.com/photo-1525353297422-7504381dce2d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a4d40b2476649fc60da344da4171db19&auto=format&fit=crop&w=2549&q=80" style={{height: "250px", width:"396px"}} class="media-object-img"></img>
     </div>
     <div class="media-body">
-      <h4 class="media-heading">Left-aligned</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <h4 class="media-heading">Always Remember... </h4>
+      <p>A revolutionary way to remember loved ones </p>
     </div>
   </div>
   <div class="media">
-    <div class="media-body">
-      <h4 class="media-heading ">Right-aligned</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div class="media-body-middle">
+      <h4 class="media-heading">Everlasting Memories...</h4>
+      <p>Share precious moments with friends and loved ones through an easy to use interface</p>
     </div>
     <div class="media-right">
-      <img src="http://placekitten.com/g/400/200" class="media-object"></img>
+      <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=02258f1572a46129ace07ee417d16eb1&auto=format&fit=crop&w=2550&q=80" style={{height: "250px", width:"396px"}} class="media-object-img"></img>
     </div>
   </div>
   <div class="media">
     <div class="media-left">
-      <img src="http://placekitten.com/g/400/200" class="media-object"></img>
+      <img src="https://images.unsplash.com/photo-1518791968894-98fbd7c1e1c7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b31069721045a9b0763eb09049eab756&auto=format&fit=crop&w=1234&q=80" style={{height: "250px", width:"396px"}} class="media-object-img"></img>
     </div>
     <div class="media-body">
       <h4 class="media-heading">Build Your Family Tree...</h4>

@@ -87,7 +87,7 @@ class App extends Component {
               <Route exact path="/search" component={ Search } />
     
             {/* </div> */}
-            <div id="space"></div>
+            {/* <div id="space"></div> */}
             <Footer />
           </div>
         </Router>

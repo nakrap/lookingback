@@ -42,22 +42,39 @@
 
 #code-text{
     margin-top:10px;
-    font-size: 14px;
+    font-size: 16px;
 
 }
 
-.footer-link { 
-    color: inherit; 
+.footer-link, .copyright { 
+    color: rgba(255, 255, 255, 0.5);
 } 
 
 .footer-link:hover {
-    font-size: 16px;
+    font-size: 17px;
     color: white; 
-    text-decoration: underline;
+    text-decoration: none;
+}
+#cool-link::after {
+    content: '';
+    display: block !important;
+    width: 0 !important;
+    height: 2px !important;
+    background:#A1D6E2 !important;
+    
+    transition: width .3s !important;
+}
+#cool-link:hover::after{
+    width: 100% !important;
 }
 
 .footer-lower{
     padding-top: 20px;
     text-align: center;
     background: inherit;
+}
+
+#middle-column {
+    border:1px solid white;
+    width:100px !important
 }

@@ -23,7 +23,7 @@ class Navbar extends Component {
     // this.onScroll = this.onScroll.bind(this);
   }
   listenScrollEvent = e => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 50) {
       this.setState({background: '#F1F1F2', color: "black", height: "75px"})
     } else {
       this.setState({background: 'transparent', color: "white", height: "65px"})
@@ -32,6 +32,8 @@ class Navbar extends Component {
   componentDidMount() {
     window.addEventListener('scroll', this.listenScrollEvent)
   }
+
+  
 
   onLogoutClick(e) {
     e.preventDefault();
@@ -57,12 +59,12 @@ class Navbar extends Component {
             Dashboard
           </Link>
         </li>
-        <li className="nav-item">
+        <li className="nav-item" style={{color:this.state.color}} >
     
-          <a 
-            href="/Dashboard" 
+          <Link 
+            to="/Dashboard" 
             onClick={this.onLogoutClick.bind(this)} 
-            className="nav-link">
+            className="nav-link" style={{color:this.state.color}}>
             <img 
               className="rounded-circle"
               src={user.avatar} 
@@ -71,7 +73,7 @@ class Navbar extends Component {
               title="you must have a Gravatar connected to your email to display an image" 
             />{' '}
             Logout
-          </a>
+          </Link>
 
         </li>
       </ul>
@@ -94,8 +96,10 @@ class Navbar extends Component {
 
     return (
     <nav className="navbar navbar-expand-sm fixed-top mb-4" style={{ height:this.state.height, transition:"all 0.6s", WebkitTransition:"all 0.6s", background:this.state.background}}>
+      
+      <span className="navbar-toggler-icon"></span>
       <div className="container">
-        <Link className="navbar-brand" to="/" style={{color:this.state.color}}>
+        <Link  className="navbar-brand" to="/" style={{color:this.state.color}}>
           <img id="logo1" src={logo} style={{height: "50px", width:"50px"}} />
 
         </Link>
@@ -106,13 +110,13 @@ class Navbar extends Component {
         <div className="collapse navbar-collapse" id="mobile-nav">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <Link className="nav-link" to="/profiles" style={{color:this.state.color}}>
+              <Link id="cool-link" className="nav-link" to="/profiles" style={{color:this.state.color}}>
                 {' '}
                 Tributes
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/search">
+              <Link className="nav-link" to="/search" style={{color:this.state.color}}>
                 {' '}
                 Search
               </Link>

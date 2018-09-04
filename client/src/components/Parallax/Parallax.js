@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Parallax } from 'react-parallax';
-// import Search from "../Search/Search";
+import SearchBarJumbo from "../SearchBarJumbo/SearchBarJumbo";
 import ThreeThings from "../ThreeThings/ThreeThings";
 import Steps from "../Steps/Steps";
 import "./Parallax.css";
@@ -17,7 +17,7 @@ const img4 = "https://images.unsplash.com/photo-1504004581186-ec07a08d8256?ixlib
 const img5 = "https://image.ibb.co/b0CLoK/pablo_5.png";
 const img6 = "https://images.unsplash.com/photo-1528569937393-ee892b976859?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7b5b9ed51391d1b4098b461fb1e0043c&auto=format&fit=crop&w=2550&q=80";
 const img7 = "https://image.ibb.co/gOmMDU/fullsizeoutput_5.jpg";
-
+const img8 = "https://image.ibb.co/fTGeQK/lookingbackedited.jpg";
 // https://image.ibb.co/hHSaNe/pablo_4.png
 // https://image.ibb.co/b0CLoK/pablo_5.png
 // https://image.ibb.co/gekJaz/pablo_6.png
