@@ -34,3 +34,10 @@ html {
   height: 75px;
   margin: 0px;
 }
+
+
+#cancel-btn{
+  float:right;
+  margin-top: 35px;
+  /* margin-bottom: 0px; */
+}
