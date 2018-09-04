@@ -152,9 +152,7 @@ class CreateProfile extends Component {
         <div className="container content-container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <Link className="btn btn-outline-warning" to="/Dashboard" style={{color:this.state.color}}>
-              Cancel
-              </Link>
+
               <h1 className="display-4 text-center">Edit Profile</h1>
               <p className="lead text-center">
                 Add some information about your loved one.
@@ -165,9 +163,9 @@ class CreateProfile extends Component {
                   className="btn btn-outline-light upload-button">
                   <i className="fas fa-upload"></i>  Upload  an Image
                 </button>
-                  recommended image - 600px X 600px
+                    <span id='img-rec'> (Recommended image - 600px X 600px)</span>
               </div>
-              <small className="d-block pb-3">* = required fields</small>
+              {/* <small className="d-block pb-3">* = required fields</small> */}
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup 
                   placeholder="* Name"
@@ -215,7 +213,9 @@ class CreateProfile extends Component {
                   className="btn btn-info btn-block mt-4" 
                 />
               </form>
-
+              <Link id='cancel-btn' className="btn btn-warning" to="/Dashboard" style={{color:this.state.color}}>
+              Cancel
+              </Link>
             </div>
           </div>
         </div>

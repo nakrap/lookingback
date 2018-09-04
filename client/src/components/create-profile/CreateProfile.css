@@ -12,10 +12,15 @@
 
 .upload{
     margin-top: 50px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 .pb-3{
     float: right;
     margin-bottom: 20px;
+}
+
+#img-rec{
+    font-size: 13px;
+    color: #6c757d!important;
 }
