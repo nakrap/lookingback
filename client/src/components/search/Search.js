@@ -9,7 +9,7 @@ import searchReducer from '../../reducers/searchReducer';
 import ProfileItem from '../profiles/ProfileItem';
 import { Link } from 'react-router-dom';
 import profileReducer from '../../reducers/profileReducer';
-import "./Search.css"
+// import "./Search.css"
 
 
 class Search extends Component {
