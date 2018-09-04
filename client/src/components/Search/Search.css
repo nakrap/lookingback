@@ -1,45 +1,14 @@
-.ui.input.search {
-    /* margin-left: 35%;
-    margin-right: 30%; */
-    position: relative;
-    bottom:125px;
-    font-size: 20px;
-    text-align: center;
+.search-wrapper {
+    background-image:url('https://images.unsplash.com/photo-1519681819371-90856986ef04?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=02696429016759ee4877435669b6d83f&auto=format&fit=crop&w=2565&q=80') ;
+    /* Full height */
+    /* height: 100%;  */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+    padding: 170px;
+    
+    /* Center and scale the image nicely */
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
 }
-
-div.input-group.col-3.search-bar {
-    position: relative;
-    bottom:125px;
-    font-size: 20px;
-    text-align: center;
-}
-
-#search-area {
-    padding-right: 80px;
-    color:#BCBABE;
-    border-radius: 5px 0px 0px 5px;
-    font-family: 'Roboto', sans-serif;
-}
-
-.ui.ui.button.search-btn.search-btn {
-    padding-left: 40px;
-    padding-right: 40px;
-    background: #A1D6E2;
-    color:#1995AD;
-    border-radius: 0px 5px 5px 0px;
-    font-family: 'Open Sans', sans-serif;
-
-}
-
-.ui.search {
-    text-align: center;
-}
-
-/* #lbLogo{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 16%;
-    margin-top: 130px;
-    margin-bottom: 200px;
-} */
