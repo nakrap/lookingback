@@ -18,8 +18,8 @@ module.exports = {
   "PLACE YOUR mLAB LINK HERE",
  secretOrKey: "PUT IN A SECRET PASSPHRASE HERE"
 };
-```
-​
+``` 
+ 
 4. Open the lookingBack root directory in Terminal.
 
 5. While in the root directory, run 'npm install'.
