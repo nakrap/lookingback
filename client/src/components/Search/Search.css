@@ -12,3 +12,30 @@
     background-repeat: no-repeat;
     background-size: cover; */
 }
+
+#search-warning{
+    font-size: 18px;
+    color: red !important;
+    margin-top: 10px;
+}
+
+#search-found{
+    text-align: center;
+    font-size: 18px;
+    color: black !important;
+    margin-top: 10px;
+}
+
+.search-results-container{
+    /* background: red !important; */
+    width: 900px;
+    margin-left: -125px;
+}
+
+@media only screen and (max-width: 1450px) {
+    .search-results-container{
+        /* background: red !important; */
+        width: 100%;
+        margin-left: 0;
+    }
+}

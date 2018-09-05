@@ -28,7 +28,15 @@
     border-radius: 10px;
     margin-top: 20px;
     overflow: auto;
-    max-height: 120px;
-    height:120px;
+    max-height: 100px;
+    height:100px;
     text-align: center;
 }
+
+
+.card.card-body.bg-light.mb-3 {
+    max-height: 200px;
+    margin-bottom: 20px !important;
+}
+
+
