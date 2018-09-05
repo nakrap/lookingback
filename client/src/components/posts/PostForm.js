@@ -29,7 +29,7 @@ class PostForm extends Component {
     const { user } = this.props.auth;
 
     if (!user.id) {
-      this.setState({ warning: '* you must be logged in to add a post'});
+      this.setState({ warning: <p id='warning'>* you must be logged in to add a post</p>});
       console.log(this.state.warning);
     }
 

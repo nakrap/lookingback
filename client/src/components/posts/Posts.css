@@ -2,3 +2,8 @@
     max-width: 94% !important;
     margin: 30px 3% 0 3%;
 }
+
+#warning{
+    color: red;
+    font-size: 14px;
+}
