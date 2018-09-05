@@ -9,6 +9,7 @@ class CommentForm extends Component {
     super(props)
     this.state = {
       text: '',
+      warning: '',
       errors: {}
     }
 
@@ -28,6 +29,11 @@ class CommentForm extends Component {
     // const { profile } = this.props.profile;
     const { user } = this.props.auth;
     const { postId } = this.props;
+
+    if (!user.id) {
+      this.setState({ warning: '* you must be logged in to add a comment'});
+      console.log(this.state.warning);
+    }
 
     const newComment = {
       text: this.state.text,
@@ -65,6 +71,7 @@ class CommentForm extends Component {
             />
             </div>
             <button type="submit" className="btn btn-dark">Submit</button>
+            <p>{ this.state.warning }</p>
           </form>
         </div>
       </div>

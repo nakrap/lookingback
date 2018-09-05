@@ -75,6 +75,11 @@ class PostItem extends Component {
               </button>
             ) : null}
             </span>) : null}
+            <Link 
+              to={`/post/${post._id}`} 
+              className="btn btn-info mr-1">
+              View Post
+            </Link>
           </div>
         </div>
       </div>    

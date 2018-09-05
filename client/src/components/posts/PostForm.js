@@ -9,6 +9,7 @@ class PostForm extends Component {
     super(props)
     this.state = {
       text: '',
+      warning: '',
       errors: {}
     }
 
@@ -22,11 +23,15 @@ class PostForm extends Component {
     }
   }
 
-  onSubmit(e) {
+  onSubmit = (e) => {
     e.preventDefault();
-
     const { profile } = this.props.profile;
     const { user } = this.props.auth;
+
+    if (!user.id) {
+      this.setState({ warning: '* you must be logged in to add a post'});
+      console.log(this.state.warning);
+    }
 
     const newPost = {
       text: this.state.text,
@@ -66,6 +71,7 @@ class PostForm extends Component {
             />
             </div>
             <button type="submit" className="btn btn-dark">Submit</button>
+            <p>{ this.state.warning }</p>
           </form>
         </div>
       </div>
