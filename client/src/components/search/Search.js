@@ -9,7 +9,7 @@ import searchReducer from '../../reducers/searchReducer';
 import ProfileItem from '../profiles/ProfileItem';
 import { Link } from 'react-router-dom';
 import profileReducer from '../../reducers/profileReducer';
-// import "./Search.css"
+import "./Search.css"
 
 
 class Search extends Component {
@@ -82,7 +82,7 @@ class Search extends Component {
     }
     return (
       <div className="login search-wrapper">
-        <div className="container content-container white">
+        <div className="container content-container">
           <div className="row">
             <div className="col-md-8 m-auto">
               <h1 className="display-4 text-center">Search Tributes</h1>
