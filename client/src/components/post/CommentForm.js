@@ -31,7 +31,7 @@ class CommentForm extends Component {
     const { postId } = this.props;
 
     if (!user.id) {
-      this.setState({ warning: '* you must be logged in to add a comment'});
+      this.setState({ warning: <p id='warning'>* you must be logged in to add a comment</p>});
       console.log(this.state.warning);
     }
 
