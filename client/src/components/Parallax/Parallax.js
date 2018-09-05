@@ -44,7 +44,7 @@ const ParallaxComponent = () => (
           <ThreeThings/>
           </div>
     <Parallax bgImage={img6} strength={-300}>
-      <div id="photobook"style={{height: 500}}>
+      <div id="photobook"style={{height: 600}}>
         {/* <div style={insideStyles}>Reverse direction</div> */}
       </div>
       {/* <QuoteSnippet style={{color:"white"}}/> */}

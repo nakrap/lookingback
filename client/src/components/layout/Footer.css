@@ -1,11 +1,11 @@
 .footer-wrapper{
     background: black;
-    max-height: 190px;
+    /* max-height: 190px; */
     text-align: center;
-    padding: 35px;
+    padding: 45px;
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -25px;
     left: 0;
 }
 

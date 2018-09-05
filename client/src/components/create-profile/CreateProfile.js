@@ -44,8 +44,6 @@ class CreateProfile extends Component {
       { cloud_name: "nakrap", upload_preset: "x2rmt9j3", tags: ["xmas"] },
       (error, result) => {
         this.setState({ img: result[0].url });
-        // console.log(result[0].url);
-        console.log(this.state.img);
       }
     );
   };
@@ -63,7 +61,6 @@ class CreateProfile extends Component {
       youtube: this.state.youtube,
       instagram: this.state.instagram
     };
-    console.log(profileData);
     this.props.createProfile(profileData, this.props.history);
   }
 
