@@ -28,8 +28,7 @@ module.exports = {
 ​
 https://vast-cove-88830.herokuapp.com/
 ​
-## NPM Dependencies:
-​
+### NPM Dependencies:
 - "bcryptjs"
 - "body-parser"
 - "concurrently"
@@ -41,12 +40,10 @@ https://vast-cove-88830.herokuapp.com/
 - "passport-jwt"
 - "validator"
 ​
-## DEV Dependency:
-​
+### DEV Dependency:
 - "nodemon"
 ​
-## YARN Dependencies:
-​
+### YARN Dependencies:
 - "@fortawesome/fontawesome-svg-core"
 - "@fortawesome/free-solid-svg-icons"
 - "@fortawesome/react-fontawesome"
@@ -68,7 +65,6 @@ https://vast-cove-88830.herokuapp.com/
 - "webpack"
 ​
 ## Built With:
-​
 ```
 - Mongodb
 - Express
