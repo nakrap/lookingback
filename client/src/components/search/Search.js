@@ -44,6 +44,9 @@ class Search extends Component {
     e.preventDefault();
     console.log('clicked')
     console.log(this.state.search)
+    if (this.state.search === '') {
+      return;
+    }
     this.props.getSearchedTributes(this.state.search);
     this.state.haveSearched = true;
     console.log(this.state.haveSearched);
@@ -66,20 +69,21 @@ class Search extends Component {
 
     console.log(searchedTributes);
 
-    if ((searchedTributes === null || searchedTributes.length < 0) && this.state.haveSearched === true) {
-      searchResults = (
-        <h6>No results found</h6>
-      )
-    } else if (searchedTributes !== null && this.state.haveSearched === true) { 
+    if (searchedTributes !== null && searchedTributes.length > 0 && this.state.haveSearched === true) { 
       searchResults = (
         <div>
-        <h6>Results:</h6>
+        <h6>Tributes found:</h6>
         { searchedTributes.map(tribute => (
           <ProfileItem key={profileReducer._id} profile={tribute} />
       ))}
       </div>
       )
+    } else if (this.state.haveSearched === true) {
+      searchResults = (
+        <h6>No tributes found.</h6>
+      )
     }
+
     return (
       <div className="login search-wrapper">
         <div className="container content-container white">
