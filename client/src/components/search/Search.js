@@ -9,7 +9,7 @@ import searchReducer from '../../reducers/searchReducer';
 import ProfileItem from '../profiles/ProfileItem';
 import { Link } from 'react-router-dom';
 import profileReducer from '../../reducers/profileReducer';
-// import "./Search.css"
+import "./Search.css"
 
 
 class Search extends Component {
@@ -71,8 +71,8 @@ class Search extends Component {
 
     if (searchedTributes !== null && searchedTributes.length > 0 && this.state.haveSearched === true) { 
       searchResults = (
-        <div>
-        <h6>Tributes found:</h6>
+        <div className='container search-results-container'>
+        <h6 id='search-found'>Tributes found:</h6>
         { searchedTributes.map(tribute => (
           <ProfileItem key={profileReducer._id} profile={tribute} />
       ))}
@@ -80,7 +80,7 @@ class Search extends Component {
       )
     } else if (this.state.haveSearched === true) {
       searchResults = (
-        <h6>No tributes found.</h6>
+        <h6 id='search-warning' >No tributes found</h6>
       )
     }
 
