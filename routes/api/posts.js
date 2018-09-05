@@ -22,7 +22,7 @@ router.get('/test', (req, res) => res.json({ msg: "posts works"}));
 // @desc - get posts
 // @access - public
 router.get('/:id', (req, res) => {
-  console.log('req.body', req.body)
+  // console.log('req.body', req.body)
   Post.find({ profile: req.params.id })
     .sort({date: -1})
     .then(posts => res.json(posts))

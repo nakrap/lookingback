@@ -6,7 +6,7 @@ import PostItem from '../posts/PostItem';
 import CommentForm from './CommentForm';
 import CommentFeed from './CommentFeed';
 import Spinner from '../common/Spinner';
-import { getPost, deletePost, addLike, removeLike } from '../../actions/postActions';
+import { getPost, deletePost, addLikePost, removeLikePost } from '../../actions/postActions';
 import './Comment.css'
 import classnames from 'classnames';
 
@@ -20,11 +20,11 @@ class Post extends Component {
   }
 
   onLikeClick(id) {
-    this.props.addLike(id, this.props.post.profile);
+    this.props.addLikePost(id, this.props.post.post._id);
   }
   
   onUnlikeClick(id) {
-    this.props.removeLike(id, this.props.post.profile);
+    this.props.removeLikePost(id, this.props.post.post._id);
   }
 
   findUserLike(likes) {
@@ -122,8 +122,8 @@ Post.propTypes = {
   post: PropTypes.object.isRequired,
   auth: PropTypes.object.isRequired,
   deletePost: PropTypes.func.isRequired,
-  addLike: PropTypes.func.isRequired,
-  removeLike: PropTypes.func.isRequired,
+  addLikePost: PropTypes.func.isRequired,
+  removeLikePost: PropTypes.func.isRequired,
 
 
 }
@@ -134,6 +134,6 @@ const mapStateToProps = state => ({
 
 })
 
-export default connect(mapStateToProps, { getPost, deletePost, addLike, removeLike })(Post);
+export default connect(mapStateToProps, { getPost, deletePost, addLikePost, removeLikePost })(Post);
 
 
