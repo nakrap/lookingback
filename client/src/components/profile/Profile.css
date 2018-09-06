@@ -1,33 +1,36 @@
-.profile{
-    margin-top: -25px !important;
-    margin-bottom:-25px;
-    background-image:url('../../img/jobHandWood.jpeg') ;
-    background-size: cover; 
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    padding: 50px;
-
+.profile {
+  margin-top: -25px !important;
+  margin-bottom: -25px;
+  background-image: url("../../img/jobHandWood.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 50px;
 }
 
-#tribute-name{
-    text-shadow: 1px 1px 5px black;
+#tribute-name {
+  text-shadow: 1px 1px 5px black;
 }
 
-#profile-pic{
-    background-color: black;
-    border: 6px solid whitesmoke;
-    margin-top: 30px;
+#profile-pic {
+  background-color: black;
+  border: 6px solid whitesmoke;
+  margin-top: 30px;
 }
 
-.profile-header{
-    border: 1px solid #bdbdbd  ;
-    background-image:url('../../img/whiteflowersTINTEDGray.png');
-    background-color: #1995AD;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover; 
+.profile-header {
+  border: 1px solid #bdbdbd;
+  background-image: url("../../img/whiteflowersTINTEDGray.png");
+  background-color: #1995ad;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-#bio-description{
-    text-align: center;
+#bio-description {
+  text-align: center;
+}
+
+#about-tribute {
+  overflow: auto;
 }
