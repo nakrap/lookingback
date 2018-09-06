@@ -44,7 +44,6 @@ class Navbar extends Component {
     this.setState({
       toLanding: true
     });
-    console.log(this.state.toLanding);
   }
 
   render() {

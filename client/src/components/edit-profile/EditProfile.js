@@ -1,30 +1,34 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import TextFieldGroup from '../common/TextFieldGroup';
-import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
-import InputGroup from '../common/InputGroup';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
+import TextFieldGroup from "../common/TextFieldGroup";
+import TextAreaFieldGroup from "../common/TextAreaFieldGroup";
+import InputGroup from "../common/InputGroup";
 // import SelectListGroup from '../common/SelectListGroup';
-import { createProfile, getCurrentProfile, getProfileById } from '../../actions/profileActions';
-import isEmpty from '../../validation/is-empty';
-import { Link } from 'react-router-dom';
+import {
+  createProfile,
+  getCurrentProfile,
+  getProfileById
+} from "../../actions/profileActions";
+import isEmpty from "../../validation/is-empty";
+import { Link } from "react-router-dom";
 
 class CreateProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
       displaySocialInputs: false,
-      name: '',
-      bio: '',
-      DOB: '',
-      img: '',
-      twitter: '',
-      facebook: '',
-      youtube: '',
-      instagram: '',
+      name: "",
+      bio: "",
+      DOB: "",
+      img: "",
+      twitter: "",
+      facebook: "",
+      youtube: "",
+      instagram: "",
       errors: {}
-    }
+    };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
@@ -34,7 +38,7 @@ class CreateProfile extends Component {
   // }
 
   componentDidMount() {
-    if(this.props.match.params.id) {
+    if (this.props.match.params.id) {
       this.props.getProfileById(this.props.match.params.id);
     }
   }
@@ -43,26 +47,31 @@ class CreateProfile extends Component {
       { cloud_name: "nakrap", upload_preset: "x2rmt9j3", tags: ["xmas"] },
       (error, result) => {
         this.setState({ img: result[0].url });
-        // console.log(result[0].url);
-        console.log(this.state.img);
       }
     );
   };
 
   componentWillReceiveProps(nextProps) {
-    if(nextProps.errors) {
-      this.setState({errors: nextProps.errors});
+    if (nextProps.errors) {
+      this.setState({ errors: nextProps.errors });
     }
-  
 
-    if(nextProps.profile.profile) {
+    if (nextProps.profile.profile) {
       const profile = nextProps.profile.profile;
 
       profile.social = !isEmpty(profile.social) ? profile.social : {};
-      profile.twitter = !isEmpty(profile.social.twitter) ? profile.social.twitter : '';
-      profile.facebook = !isEmpty(profile.social.facebook) ? profile.social.facebook : '';
-      profile.youtube = !isEmpty(profile.social.youtube) ? profile.social.youtube : '';
-      profile.instagram = !isEmpty(profile.social.instagram) ? profile.social.instagram : '';
+      profile.twitter = !isEmpty(profile.social.twitter)
+        ? profile.social.twitter
+        : "";
+      profile.facebook = !isEmpty(profile.social.facebook)
+        ? profile.social.facebook
+        : "";
+      profile.youtube = !isEmpty(profile.social.youtube)
+        ? profile.social.youtube
+        : "";
+      profile.instagram = !isEmpty(profile.social.instagram)
+        ? profile.social.instagram
+        : "";
 
       // set component fields state
       this.setState({
@@ -75,14 +84,13 @@ class CreateProfile extends Component {
         youtube: profile.youtube,
         instagram: profile.instagram,
         id: profile._id
-      })
-      
+      });
     }
   }
 
   onSubmit(e) {
-    e.preventDefault(); 
-    
+    e.preventDefault();
+
     const profileData = {
       name: this.state.name,
       bio: this.state.bio,
@@ -93,13 +101,12 @@ class CreateProfile extends Component {
       youtube: this.state.youtube,
       instagram: this.state.instagram,
       id: this.state.id
-    }
+    };
 
     this.props.createProfile(profileData, this.props.history);
   }
 
   onChange(e) {
-    console.log(e.target.name, e.target.value)
     this.setState({ [e.target.name]: e.target.value });
   }
 
@@ -144,7 +151,7 @@ class CreateProfile extends Component {
             error={errors.instagram}
           />
         </div>
-      )
+      );
     }
 
     return (
@@ -152,22 +159,22 @@ class CreateProfile extends Component {
         <div className="container content-container">
           <div className="row">
             <div className="col-md-8 m-auto">
-
               <h1 className="display-4 text-center">Edit Profile</h1>
               <p className="lead text-center">
                 Add some information about your loved one.
               </p>
               <div className="upload">
-                <button 
+                <button
                   onClick={this.uploadWidget.bind(this)}
-                  className="btn btn-outline-light upload-button">
-                  <i className="fas fa-upload"></i>  Upload  an Image
+                  className="btn btn-outline-light upload-button"
+                >
+                  <i className="fas fa-upload" /> Upload an Image
                 </button>
-                    <span id='img-rec'> (Recommended image - 600px X 600px)</span>
+                <span id="img-rec"> (Recommended image - 600px X 600px)</span>
               </div>
               {/* <small className="d-block pb-3">* = required fields</small> */}
               <form onSubmit={this.onSubmit}>
-                <TextFieldGroup 
+                <TextFieldGroup
                   placeholder="* Name"
                   name="name"
                   value={this.state.name}
@@ -175,7 +182,7 @@ class CreateProfile extends Component {
                   error={errors.name}
                   info="* First and Last name"
                 />
-                <TextFieldGroup 
+                <TextFieldGroup
                   placeholder="* Date of Birth"
                   name="DOB"
                   type="date"
@@ -184,7 +191,7 @@ class CreateProfile extends Component {
                   error={errors.DOB}
                   info="* Date of Birth"
                 />
-                <TextAreaFieldGroup 
+                <TextAreaFieldGroup
                   placeholder="Bio"
                   name="bio"
                   value={this.state.bio}
@@ -193,34 +200,41 @@ class CreateProfile extends Component {
                   info="Write some words about your loved one"
                 />
                 <div className="mb-3">
-                  <button 
-                  type="button"
-                  onClick={() => {
-                    this.setState(prevState => ({
-                      displaySocialInputs: !prevState.displaySocialInputs
-                    }))
-                  }} className="btn btn-light">
-                  Add Social Network Links
+                  <button
+                    type="button"
+                    onClick={() => {
+                      this.setState(prevState => ({
+                        displaySocialInputs: !prevState.displaySocialInputs
+                      }));
+                    }}
+                    className="btn btn-light"
+                  >
+                    Add Social Network Links
                   </button>
                   <span className="text-muted"> (Optional)</span>
                 </div>
                 {socialInputs}
                 <small className="d-block pb-3">* = required fields</small>
 
-                <input 
-                  type="submit" 
-                  value="Submit" 
-                  className="btn btn-info btn-block mt-4" 
+                <input
+                  type="submit"
+                  value="Submit"
+                  className="btn btn-info btn-block mt-4"
                 />
               </form>
-              <Link id='cancel-btn' className="btn btn-warning" to="/Dashboard" style={{color:this.state.color}}>
-              Cancel
+              <Link
+                id="cancel-btn"
+                className="btn btn-warning"
+                to="/Dashboard"
+                style={{ color: this.state.color }}
+              >
+                Cancel
               </Link>
             </div>
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
@@ -230,11 +244,14 @@ CreateProfile.propTypes = {
   profile: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired,
   getProfileById: PropTypes.func.isRequired
-}
+};
 
 const mapStateToProps = state => ({
   profile: state.profile,
   errors: state.errors
-})
+});
 
-export default connect(mapStateToProps, { createProfile, getCurrentProfile, getProfileById })(withRouter(CreateProfile));
+export default connect(
+  mapStateToProps,
+  { createProfile, getCurrentProfile, getProfileById }
+)(withRouter(CreateProfile));

@@ -40,14 +40,11 @@ class Search extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-    console.log("clicked");
-    console.log(this.state.search);
     if (this.state.search === "") {
       return;
     }
     this.props.getSearchedTributes(this.state.search);
     this.state.haveSearched = true;
-    console.log(this.state.haveSearched);
     const search = {
       name: this.state.search
     };
@@ -59,13 +56,10 @@ class Search extends Component {
 
   render() {
     const { errors } = this.state;
-    console.log(this.state.search);
 
     let searchResults;
 
     const { searchedTributes } = this.props.searchedTributes;
-
-    console.log(searchedTributes);
 
     if (
       searchedTributes !== null &&
