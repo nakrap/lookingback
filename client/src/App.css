@@ -4,7 +4,7 @@ img {
 
 .landing {
   position: relative;
-  background: url('./img/candles.jpg') no-repeat;
+  background: url("./img/candles.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -38,27 +38,73 @@ img {
   color: #bbb !important;
 }
 
-.mb-4, .my-4 {
+.mb-4,
+.my-4 {
   margin-bottom: 0 !important;
 }
 
-a, h1, h3, h4  {
-  font-family:'Poppins', sans-serif;
+a,
+h1,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
 }
 h4 {
   font-size: 2.5rem;
 }
 
-p{
-  font-size:18px;
+p {
+  font-size: 18px;
 }
 
 body {
-  background-color: #A1D6E2;
-  font-family: 'Roboto Slab', serif;
+  background-color: #a1d6e2;
+  font-family: "Roboto Slab", serif;
 }
 
-.media-body{
-   position: relative;
-   left: 40px;
+.media-body {
+  position: relative;
+  left: 40px;
+}
+
+.search-wrapper {
+  background-image: url("https://images.unsplash.com/photo-1519681819371-90856986ef04?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=02696429016759ee4877435669b6d83f&auto=format&fit=crop&w=2565&q=80");
+  /* Full height */
+  /* height: 100%;  */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 170px;
+
+  /* Center and scale the image nicely */
+  /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+#search-warning {
+  font-size: 18px;
+  color: red !important;
+  margin-top: 10px;
+}
+
+#search-found {
+  text-align: center;
+  font-size: 18px;
+  color: black !important;
+  margin-top: 10px;
+}
+
+.search-results-container {
+  /* background: red !important; */
+  width: 900px;
+  margin-left: -125px;
+}
+
+@media only screen and (max-width: 1450px) {
+  .search-results-container {
+    /* background: red !important; */
+    width: 100%;
+    margin-left: 0;
+  }
 }
