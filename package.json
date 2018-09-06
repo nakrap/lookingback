@@ -2,6 +2,9 @@
   "name": "looking-back",
   "version": "1.0.0",
   "description": "Social network to remember lost loved ones.",
+  "engines": {
+    "node": "8.11.2"
+  },
   "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",
