@@ -11,11 +11,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
-<<<<<<< HEAD
-  "author": "Dream Team",
-=======
   "author": "The Dream Team",
->>>>>>> dev
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
