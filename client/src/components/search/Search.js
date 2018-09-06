@@ -1,29 +1,27 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { loginUser } from '../../actions/authActions';
-import { getSearchedTributes } from '../../actions/searchActions'
-import TextFieldGroup from '../common/TextFieldGroup';
-import Spinner from '../common/Spinner';
-import searchReducer from '../../reducers/searchReducer';
-import ProfileItem from '../profiles/ProfileItem';
-import { Link } from 'react-router-dom';
-import profileReducer from '../../reducers/profileReducer';
-import "./Search.css"
-
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+// import { loginUser } from "../../actions/authActions";
+import { getSearchedTributes } from "../../actions/searchActions";
+import TextFieldGroup from "../common/TextFieldGroup";
+// import Spinner from "../common/Spinner";
+// import searchReducer from "../../reducers/searchReducer";
+import ProfileItem from "../profiles/ProfileItem";
+// import { Link } from "react-router-dom";
+import profileReducer from "../../reducers/profileReducer";
+import "./Search.css";
 
 class Search extends Component {
   constructor() {
     super();
     this.state = {
-      search: '',
+      search: "",
       haveSearched: false,
       errors: {}
     };
 
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
-
   }
 
   componentDidMount() {
@@ -42,9 +40,9 @@ class Search extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-    console.log('clicked')
-    console.log(this.state.search)
-    if (this.state.search === '') {
+    console.log("clicked");
+    console.log(this.state.search);
+    if (this.state.search === "") {
       return;
     }
     this.props.getSearchedTributes(this.state.search);
@@ -52,16 +50,16 @@ class Search extends Component {
     console.log(this.state.haveSearched);
     const search = {
       name: this.state.search
-    }
+    };
   }
 
   onChange(e) {
-    this.setState({[e.target.name]: e.target.value});
+    this.setState({ [e.target.name]: e.target.value });
   }
 
   render() {
     const { errors } = this.state;
-    console.log(this.state.search)
+    console.log(this.state.search);
 
     let searchResults;
 
@@ -69,19 +67,21 @@ class Search extends Component {
 
     console.log(searchedTributes);
 
-    if (searchedTributes !== null && searchedTributes.length > 0 && this.state.haveSearched === true) { 
+    if (
+      searchedTributes !== null &&
+      searchedTributes.length > 0 &&
+      this.state.haveSearched === true
+    ) {
       searchResults = (
-        <div className='container search-results-container'>
-        <h6 id='search-found'>Tributes found:</h6>
-        { searchedTributes.map(tribute => (
-          <ProfileItem key={profileReducer._id} profile={tribute} />
-      ))}
-      </div>
-      )
+        <div className="container search-results-container">
+          <h6 id="search-found">Tributes found:</h6>
+          {searchedTributes.map(tribute => (
+            <ProfileItem key={profileReducer._id} profile={tribute} />
+          ))}
+        </div>
+      );
     } else if (this.state.haveSearched === true) {
-      searchResults = (
-        <h6 id='search-warning' >No tributes found</h6>
-      )
+      searchResults = <h6 id="search-warning">No tributes found</h6>;
     }
 
     return (
@@ -90,7 +90,7 @@ class Search extends Component {
           <div className="row">
             <div className="col-md-8 m-auto">
               <h1 className="display-4 text-center">Search Tributes</h1>
-              <p className="lead text-center"></p>
+              <p className="lead text-center" />
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
                   placeholder="Search by name"
@@ -102,12 +102,12 @@ class Search extends Component {
                 />
                 <input type="submit" className="btn btn-info btn-block mt-4" />
               </form>
-              { searchResults }
+              {searchResults}
             </div>
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
@@ -117,11 +117,14 @@ Search.propTypes = {
   // loginUser: PropTypes.func.isRequired,
   // auth: PropTypes.object.isRequired,
   // errors: PropTypes.object.isRequired
-}
+};
 
-const mapStateToProps = (state) => ({
-  searchedTributes: state.searchedTributes,
+const mapStateToProps = state => ({
+  searchedTributes: state.searchedTributes
   // auth: state.auth,
   // errors: state.errors,
-})
-export default connect(mapStateToProps, { getSearchedTributes })(Search);
+});
+export default connect(
+  mapStateToProps,
+  { getSearchedTributes }
+)(Search);
