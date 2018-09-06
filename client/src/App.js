@@ -24,6 +24,7 @@ import Profiles from './components/profiles/Profiles';
 import Profile from './components/profile/Profile';
 import Posts from './components/posts/Posts';
 import Post from './components/post/Post';
+import Search from './components/search/Search';
 import NotFound from './components/not-found/NotFound';
 
 
@@ -62,7 +63,7 @@ class App extends Component {
           <div className="App">
             <Navbar />
             <Route exact path="/" component={ Landing } />
-            <div className="container">
+            {/* <div className="container-fluid"> */}
               <Route exact path="/register" component={ Register } />
               <Route exact path="/login" component={ Login } />
               <Route exact path="/profiles" component={ Profiles } />
@@ -79,12 +80,14 @@ class App extends Component {
               <Switch>
                 <PrivateRoute exact path="/feed" component={ Posts } />
               </Switch>
-              <Switch>
-                <PrivateRoute exact path="/post/:id" component={ Post } />
-              </Switch>
+              {/* <Switch> */}
+                <Route exact path="/post/:id" component={ Post } />
+              {/* </Switch> */}
               <Route exact path="/not-found" component={ NotFound } />
+              <Route exact path="/search" component={ Search } />
     
-            </div>
+            {/* </div> */}
+            {/* <div id="space"></div> */}
             <Footer />
           </div>
         </Router>

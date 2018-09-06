@@ -8,7 +8,8 @@ import ProfileAbout from './ProfileAbout';
 import Spinner from '../common/Spinner';
 import Posts from '../posts/Posts';
 import { getProfileById } from '../../actions/profileActions';
-import { getPosts } from '../../actions/postActions';
+// import { getPosts } from '../../actions/postActions';
+import './Profile.css'
 
 class Profile extends Component {
   componentDidMount() {
@@ -36,7 +37,7 @@ class Profile extends Component {
           <div className="row">
             <div className="col-md-6">
               <Link to="/profiles" className="btn btn-light mb-3 float-left">
-                Back To profiles
+                <strong>Back To Tributes</strong>
               </Link>
             </div>
             <div className="col-md-6" />
@@ -49,8 +50,8 @@ class Profile extends Component {
       )
     }
     return (
-      <div className="profile">
-        <div className="container">
+      <div className="profile container-fluid">
+        <div className="container content-container">
           <div className="row">
             <div className="col-md-12">
               {profileContent}

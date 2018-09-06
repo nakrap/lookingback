@@ -1,0 +1,10 @@
+#post-items{
+    max-width: 94% !important;
+    margin: 30px 3% 0 3%;
+}
+
+#warning{
+    margin-top: 6px;
+    color: red;
+    font-size: 14px;
+}

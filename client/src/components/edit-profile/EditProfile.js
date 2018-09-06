@@ -8,6 +8,7 @@ import InputGroup from '../common/InputGroup';
 // import SelectListGroup from '../common/SelectListGroup';
 import { createProfile, getCurrentProfile, getProfileById } from '../../actions/profileActions';
 import isEmpty from '../../validation/is-empty';
+import { Link } from 'react-router-dom';
 
 class CreateProfile extends Component {
   constructor(props) {
@@ -37,6 +38,16 @@ class CreateProfile extends Component {
       this.props.getProfileById(this.props.match.params.id);
     }
   }
+  uploadWidget = () => {
+    window.cloudinary.openUploadWidget(
+      { cloud_name: "nakrap", upload_preset: "x2rmt9j3", tags: ["xmas"] },
+      (error, result) => {
+        this.setState({ img: result[0].url });
+        // console.log(result[0].url);
+        console.log(this.state.img);
+      }
+    );
+  };
 
   componentWillReceiveProps(nextProps) {
     if(nextProps.errors) {
@@ -137,40 +148,49 @@ class CreateProfile extends Component {
     }
 
     return (
-      <div className="create-profile">
-        <div className="container">
+      <div className="create-profile cp-wrapper">
+        <div className="container content-container">
           <div className="row">
             <div className="col-md-8 m-auto">
+
               <h1 className="display-4 text-center">Edit Profile</h1>
               <p className="lead text-center">
                 Add some information about your loved one.
               </p>
-              <small className="d-block pb-3">* = required fields</small>
+              <div className="upload">
+                <button 
+                  onClick={this.uploadWidget.bind(this)}
+                  className="btn btn-outline-light upload-button">
+                  <i className="fas fa-upload"></i>  Upload  an Image
+                </button>
+                    <span id='img-rec'> (Recommended image - 600px X 600px)</span>
+              </div>
+              {/* <small className="d-block pb-3">* = required fields</small> */}
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup 
-                  placeholder="* name"
+                  placeholder="* Name"
                   name="name"
                   value={this.state.name}
                   onChange={this.onChange}
                   error={errors.name}
-                  info="first and last name"
+                  info="* First and Last name"
                 />
                 <TextFieldGroup 
-                  placeholder="date of birth"
+                  placeholder="* Date of Birth"
                   name="DOB"
                   type="date"
                   value={this.state.DOB}
                   onChange={this.onChange}
                   error={errors.DOB}
-                  info="date of birth"
+                  info="* Date of Birth"
                 />
                 <TextAreaFieldGroup 
-                  placeholder="bio"
+                  placeholder="Bio"
                   name="bio"
                   value={this.state.bio}
                   onChange={this.onChange}
                   error={errors.bio}
-                  info="write some words about your loved one"
+                  info="Write some words about your loved one"
                 />
                 <div className="mb-3">
                   <button 
@@ -182,15 +202,20 @@ class CreateProfile extends Component {
                   }} className="btn btn-light">
                   Add Social Network Links
                   </button>
-                  <span className="text-muted">Optional</span>
+                  <span className="text-muted"> (Optional)</span>
                 </div>
                 {socialInputs}
+                <small className="d-block pb-3">* = required fields</small>
+
                 <input 
                   type="submit" 
                   value="Submit" 
                   className="btn btn-info btn-block mt-4" 
                 />
               </form>
+              <Link id='cancel-btn' className="btn btn-warning" to="/Dashboard" style={{color:this.state.color}}>
+              Cancel
+              </Link>
             </div>
           </div>
         </div>

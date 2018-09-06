@@ -9,6 +9,7 @@ class CommentForm extends Component {
     super(props)
     this.state = {
       text: '',
+      warning: '',
       errors: {}
     }
 
@@ -25,9 +26,14 @@ class CommentForm extends Component {
   onSubmit(e) {
     e.preventDefault();
 
-    const { profile } = this.props.profile;
+    // const { profile } = this.props.profile;
     const { user } = this.props.auth;
     const { postId } = this.props;
+
+    if (!user.id) {
+      this.setState({ warning: <p id='warning'>* you must be logged in to add a comment</p>});
+      console.log(this.state.warning);
+    }
 
     const newComment = {
       text: this.state.text,
@@ -48,7 +54,7 @@ class CommentForm extends Component {
     const { errors } = this.state;
 
     return (
-    <div className="post-form mb-3">
+    <div className="post-form mb-3 comment-form">
       <div className="card card-info">
         <div className="card-header bg-info text-white">
           Make a comment...
@@ -65,6 +71,7 @@ class CommentForm extends Component {
             />
             </div>
             <button type="submit" className="btn btn-dark">Submit</button>
+            <p>{ this.state.warning }</p>
           </form>
         </div>
       </div>

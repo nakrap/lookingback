@@ -12,7 +12,7 @@ class CommentItem extends Component {
     const { comment, postId, auth } = this.props;
 
     return (
-    <div className="card card-body mb-3">
+    <div className="card card-body mb-3 comment-card">
       <div className="row">
         <div className="col-md-2">
           <a href="profile.html">
@@ -24,7 +24,7 @@ class CommentItem extends Component {
           <br />
           <p className="text-center">{comment.name}</p>
         </div>
-        <div className="col-md-10">
+        <div className="col-md-10 post-text">
           <p className="lead">{comment.text}</p>
           {comment.user === auth.user.id ? (
               <button 

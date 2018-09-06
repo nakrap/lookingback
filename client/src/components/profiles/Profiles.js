@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import Spinner from '../common/Spinner';
 import ProfileItem from './ProfileItem';
 import { getProfiles } from '../../actions/profileActions';
+import './Profiles.css'
+
 
 class Profiles extends Component {
   componentDidMount() {
@@ -28,7 +30,7 @@ class Profiles extends Component {
 
     return (
       <div className="profiles">
-        <div className="container">
+        <div className="container content-container">
           <div className="row">
             <div className="col-md-12">
               <h1 className="display-4 text-center">Tribute Pages</h1>

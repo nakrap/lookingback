@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import classnames from 'classnames';
 import { Link } from 'react-router-dom';
 import { deletePost, addLike, removeLike } from '../../actions/postActions';
+import "./Posts.css"
+
 
 class PostItem extends Component {
   onDeleteClick(id) {
@@ -11,11 +13,11 @@ class PostItem extends Component {
   }
 
   onLikeClick(id) {
-    this.props.addLike(id);
+    this.props.addLike(id, this.props.post.profile);
   }
   
   onUnlikeClick(id) {
-    this.props.removeLike(id);
+    this.props.removeLike(id, this.props.post.profile);
   }
 
   findUserLike(likes) {
@@ -29,24 +31,26 @@ class PostItem extends Component {
 
   render() {
     const { post, auth, showActions } = this.props;
+    let ShowActions = true;
 
+    if (!auth.user.id) {
+      ShowActions = false;
+    }
     return (
-      <div className="card card-body mb-3">
+      <div id="post-items" className="card card-body mb-3 ">
         <div className="row">
           <div className="col-md-2">
-            <a href="profile.html">
               <img 
                 className="rounded-circle d-none d-md-block" 
                 src={post.avatar}
                 alt="" 
               />
-            </a>
             <br />
             <p className="text-center">{post.name}</p>
           </div>
           <div className="col-md-10">
             <p className="lead">{post.text}</p>
-            {showActions ? (<span>
+            {ShowActions ? (<span>
               <button 
               onClick={this.onLikeClick.bind(this, post._id)} type="button" 
               className="btn btn-light mr-1"
@@ -57,11 +61,6 @@ class PostItem extends Component {
             <button onClick={this.onUnlikeClick.bind(this, post._id)} type="button" className="btn btn-light mr-1">
               <i className="text-secondary fas fa-thumbs-down"></i>
             </button>
-            <Link 
-              to={`/post/${post._id}`} 
-              className="btn btn-info mr-1">
-              Comments
-            </Link>
             {post.user === auth.user.id ? (
               <button 
                 onClick={this.onDeleteClick.bind(this, post._id)} type="button" 
@@ -71,6 +70,11 @@ class PostItem extends Component {
               </button>
             ) : null}
             </span>) : null}
+            <Link 
+              to={`/post/${post._id}`} 
+              className="btn btn-info mr-1">
+              View Post
+            </Link>
           </div>
         </div>
       </div>    
